@@ -1,4 +1,4 @@
-import { Sidebar, SwitchThemeButton } from '../../components';
+import { HeroSection, Sidebar, SwitchThemeButton } from '../../components';
 import { Container } from './components'; 
 
 const Home = ({ theme, changeTheme }) => {
@@ -7,6 +7,7 @@ const Home = ({ theme, changeTheme }) => {
         <Container>
             <Sidebar theme={theme} />
             <SwitchThemeButton theme={theme} changeTheme={changeTheme} />
+            <HeroSection />
         </Container>
     )
 }

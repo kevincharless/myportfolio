@@ -13,7 +13,7 @@ const SwitchThemeButton = ({theme, changeTheme}) => {
     }
 
     return (
-        <Container onClick={triggerToggle} theme={theme}>
+        <Container onClick={triggerToggle} theme={theme} toggle={toggle}>
             <ToggleCheckIcon toggle={toggle}>
                 <NightsStayIcon />
             </ToggleCheckIcon>

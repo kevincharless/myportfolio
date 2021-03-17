@@ -21,6 +21,9 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
+    position: fixed;
+    z-index: 999;
 `
 
 export const Logo = styled.img`

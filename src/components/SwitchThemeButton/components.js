@@ -1,16 +1,20 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: 68px;
-    height: 32px;
+    width: 72px;
+    height: 36px;
 
-    background-color: #1A1D24;
+    background-color: ${({ toggle }) => toggle ? '#1A1D24' : '#fff'};
     border-radius: 30px;
 
     display: flex;
     align-items: center;
 
     cursor: pointer;
+
+    position: absolute;
+    top: 8%;
+    left: 90%;
 `
 
 export const ToggleCheckIcon = styled.div`
@@ -40,13 +44,13 @@ export const ToggleCircle = styled.div`
 
     border-radius: 30px;
 
-    background-color: #fff;
+    background-color: ${({ toggle }) => toggle ? '#FBFBFD' : '#1A1D24'};
 
     position: absolute;
 
-    -webkit-transform: ${({ toggle }) => toggle && 'translateX(26px)'};
-    -ms-transform: ${({ toggle }) => toggle && 'translateX(26px)'};
-    transform: ${({ toggle }) => toggle ? 'translateX(38px)' : 'translateX(6px)'};
+    -webkit-transform: ${({ toggle }) => toggle ? 'translateX(40px)' : 'translateX(8px)'};
+    -ms-transform: ${({ toggle }) => toggle ? 'translateX(40px)' : 'translateX(8px)'};
+    transform: ${({ toggle }) => toggle ? 'translateX(40px)' : 'translateX(8px)'};
 
     -webkit-transition: .4s;
     transition: .4s;
