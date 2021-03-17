@@ -1,10 +1,15 @@
+import React, { useState, useEffect } from 'react';
+
 import { Home } from './pages';
 
-const App = () => {
+
+const App = ({theme, changeTheme}) => {
+  
   return (
-    <div>
-      <Home />
-    </div>
+    <>
+          <Home theme={theme} changeTheme={changeTheme} />
+      
+    </>
   )
 }
 

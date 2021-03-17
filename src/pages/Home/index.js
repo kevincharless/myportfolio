@@ -1,8 +1,13 @@
-const Home = () => {
+import { Sidebar, SwitchThemeButton } from '../../components';
+import { Container } from './components'; 
+
+const Home = ({ theme, changeTheme }) => {
+    
     return (
-        <div>
-            
-        </div>
+        <Container>
+            <Sidebar theme={theme} />
+            <SwitchThemeButton theme={theme} changeTheme={changeTheme} />
+        </Container>
     )
 }
 
