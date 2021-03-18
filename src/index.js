@@ -10,10 +10,10 @@ import { GlobalStyles } from './assets/theme/GlobalStyles';
 
 const Index = () => {
   const [theme, setTheme] = useState(getFromLS('theme'));
-
+console.log(theme)
   const changeTheme = () => {
     theme.themeName === 'dark' ? setTheme(themes.theme.light) : setTheme(themes.theme.dark);
-    setToLS('theme', theme);
+    setToLS('theme', theme.themeName === 'dark' ? themes.theme.light : themes.theme.dark);
   }
 
   useEffect(() => {

@@ -7,7 +7,7 @@ const App = ({theme, changeTheme}) => {
   
   return (
     <>
-          <Home theme={theme} changeTheme={changeTheme} />
+      <Home theme={theme} changeTheme={changeTheme} />
       
     </>
   )

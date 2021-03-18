@@ -5,7 +5,7 @@ import NightsStayIcon from '@material-ui/icons/NightsStay';
 import WbSunnyIcon from '@material-ui/icons/WbSunny';
 
 const SwitchThemeButton = ({theme, changeTheme}) => {
-    const [toggle, setToggle] = useState(false);
+    const [toggle, setToggle] = useState(theme.themeName === 'dark' ? true : false);
 
     const triggerToggle = () => {
         setToggle(!toggle);
