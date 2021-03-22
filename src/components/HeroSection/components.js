@@ -32,21 +32,14 @@ export const HeroAbstract = styled.img`
 `
 export const HeroAbstract2 = styled.img`
     position: absolute;
-    top: 78%;
+    top: 74%;
     left: 90%;
-    -webkit-animation:spin 8s linear infinite;
-    -moz-animation:spin 8s linear infinite;
-    animation:spin 8s linear infinite;
-
-    @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-    @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-    @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 `
 
 export const TitleAbstract = styled.div`
 
     position: relative;
-    left: 80%;
+    left: 65%;
 
     display: flex;
     align-items: center;
@@ -155,7 +148,7 @@ export const TitleAbstract3 = styled.img`
 
 export const DescriptionAbstract = styled.img`
     position: relative;
-    left: 93%;
+    left: 78%;
 
     animation-name: arrow;
     animation-delay: 500ms;
@@ -189,17 +182,17 @@ export const DescriptionAbstract = styled.img`
 `
 
 export const Title = styled.h1`
-    font-size: 48px;
+    font-size: 32px;
     font-weight: 600;
 
     margin: 0;
-    margin: -24px 0;
+    margin-bottom: -12px;
 `
 
 export const Description = styled.p`
-    font-size: 24px;
+    font-size: 18px;
 
-    margin: -20px 0;
+    margin: -12px 0;
 `
 
 export const ImageContainer = styled.div`

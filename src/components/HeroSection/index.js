@@ -1,3 +1,6 @@
+import { useRef, useState, useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useSpring, animated } from 'react-spring';
 
 import { SectionContainer, Col, Row, Content, HeroAbstract, HeroAbstract2, TitleAbstract, TitleAbstract1, TitleAbstract2, TitleAbstract3, DescriptionAbstract, Title,  Description, ImageContainer, ImageAbstractBackground, ScrollDown, ScrollDownAbstract } from './components';
@@ -16,8 +19,27 @@ const trans2 = (x, y) => `translate3d(${x / 8 + 35}px,${y / 8 - 230}px,0)`
 const trans3 = (x, y) => `translate3d(${x / 6 - 250}px,${y / 6 - 200}px,0)`
 const trans4 = (x, y) => `translate3d(${x / 7}px,${y / 7}px,0)`
 
+gsap.registerPlugin(ScrollTrigger);
+
 const HeroSection = () => {
-    const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 625, friction: 125 } }))
+    const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 625, friction: 125 } }));
+
+    const abstractRef = useRef(null);
+
+    useEffect(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: abstractRef.current,
+                start: "top center+=125",
+                end: "center top-=25",
+                scrub: true,
+                toggleActions: 'play none none reverse',
+            }
+        });
+        tl.to(abstractRef.current, {
+            rotation: 360,
+        })
+    }, [])
 
     return (
         <SectionContainer>
@@ -38,17 +60,17 @@ const HeroSection = () => {
                 </Col>
                 <Col item xs={12} sm={5}>
                     <ImageContainer onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
-                        <animated.div class="card1" style={{ transform: props.xy.interpolate(trans1) }} />
-                        <animated.div class="card2" style={{ transform: props.xy.interpolate(trans2) }} />
-                        <animated.div class="card3" style={{ transform: props.xy.interpolate(trans3) }} />
-                        <animated.div class="card4" style={{ transform: props.xy.interpolate(trans4) }} />
+                        <animated.div className="card1" style={{ transform: props.xy.interpolate(trans1) }} />
+                        <animated.div className="card2" style={{ transform: props.xy.interpolate(trans2) }} />
+                        <animated.div className="card3" style={{ transform: props.xy.interpolate(trans3) }} />
+                        <animated.div className="card4" style={{ transform: props.xy.interpolate(trans4) }} />
                     </ImageContainer>
                     <ImageAbstractBackground src={ImageAbstract} />
                 </Col>
             </Row>
             <ScrollDown>scroll down</ScrollDown>
             <ScrollDownAbstract src={ScrollDownAbstractImage} />
-            <HeroAbstract2 src={HeroAbstract2Image} />
+            <HeroAbstract2 ref={abstractRef} src={HeroAbstract2Image} />
         </SectionContainer>
     )
 }
