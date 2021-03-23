@@ -47,103 +47,14 @@ export const TitleAbstract = styled.div`
 
 export const TitleAbstract1 = styled.img`
     padding: 0.5em;
-
-    /* animation-name: bounce;
-    animation-delay: 500ms;
-    animation-duration: 2s;
-    animation-play-state: running;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    
-
-    @keyframes bounce {
-        0% {
-            transform: scale(1, 1);
-        }
-        10% {
-            transform: scale(1.2, 0.8);
-        }
-        30% {
-            transform: scale(0.8, 1.2) translate(0, -24px);
-        }
-        50% {
-            transform: scale(1, 0.9) translate(0, 0);
-        }
-        60% {
-            transform: scale(1, 1);
-        }
-        70% {
-            transform: scale(1.05, .95);
-        }
-        80% {
-            transform: scale(1, 1);
-        }
-    } */
 `
 
 export const TitleAbstract2 = styled.img`
-    /* animation-name: bounce;
-    animation-delay: 1000ms;
-    animation-duration: 2s;
-    animation-play-state: running;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-
-    @keyframes bounce {
-        0% {
-            transform: scale(1, 1);
-        }
-        10% {
-            transform: scale(1.2, 0.8);
-        }
-        30% {
-            transform: scale(0.8, 1.2) translate(0, -24px);
-        }
-        50% {
-            transform: scale(1, 0.9) translate(0, 0);
-        }
-        60% {
-            transform: scale(1, 1);
-        }
-        70% {
-            transform: scale(1.05, .95);
-        }
-        80% {
-            transform: scale(1, 1);
-        }
-    } */
+    
 `
 
 export const TitleAbstract3 = styled.img`
-    /* animation-name: bounce;
-    animation-duration: 2s;
-    animation-play-state: running;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out; */
-/* 
-    @keyframes bounce {
-        0% {
-            transform: scale(1, 1);
-        }
-        10% {
-            transform: scale(1.2, 0.8);
-        }
-        30% {
-            transform: scale(0.8, 1.2) translate(0, -24px);
-        }
-        50% {
-            transform: scale(1, 0.9) translate(0, 0);
-        }
-        60% {
-            transform: scale(1, 1);
-        }
-        70% {
-            transform: scale(1.05, .95);
-        }
-        80% {
-            transform: scale(1, 1);
-        }
-    } */
+    
 `
 
 export const DescriptionAbstract = styled.img`
