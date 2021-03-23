@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useSpring, animated } from 'react-spring';
 
-import { SectionContainer, Col, Row, Content, HeroAbstract, HeroAbstract2, TitleAbstract, TitleAbstract1, TitleAbstract2, TitleAbstract3, DescriptionAbstract, Title,  Description, ImageContainer, ImageAbstractBackground, ScrollDown, ScrollDownAbstract } from './components';
+import { SectionContainer, Col, Row, Content, HeroAbstract, HeroAbstract2, TitleAbstract, TitleAbstract1, TitleAbstract2, TitleAbstract3, DescriptionAbstract, Title,  Description, ImageContainer, ImageAbstractBackground, ScrollDownContainer, ScrollDown, ScrollDownAbstract } from './components';
 import TitleAbstractImage1 from '../../assets/images/abstract/TitleAbstract1.svg';
 import TitleAbstractImage2 from '../../assets/images/abstract/TitleAbstract2.svg';
 import TitleAbstractImage3 from '../../assets/images/abstract/TitleAbstract3.svg';
@@ -83,7 +83,7 @@ const HeroSection = () => {
         <SectionContainer>
             <HeroAbstract src={HeroAbstractImage} />
             <Row container>
-                <Col item xs={12} sm={7}>
+                <Col item xs={12} md={6}>
                     <Content>
                         <TitleAbstract onMouseEnter={onMouseEnterHandler}>
                             <TitleAbstract3 ref={TitleAbstract3Ref} src={TitleAbstractImage3} />
@@ -96,7 +96,7 @@ const HeroSection = () => {
                         <DescriptionAbstract src={DescriptionAbstractImage} />
                     </Content>
                 </Col>
-                <Col item xs={12} sm={5}>
+                <Col item xs={12} md={6}>
                     <ImageContainer onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
                         <animated.div className="card1" style={{ transform: props.xy.interpolate(trans1) }} />
                         <animated.div className="card2" style={{ transform: props.xy.interpolate(trans2) }} />
@@ -106,8 +106,10 @@ const HeroSection = () => {
                     <ImageAbstractBackground src={ImageAbstract} />
                 </Col>
             </Row>
-            <ScrollDown>scroll down</ScrollDown>
-            <ScrollDownAbstract src={ScrollDownAbstractImage} />
+            <ScrollDownContainer>
+                <ScrollDown>scroll down</ScrollDown>
+                <ScrollDownAbstract src={ScrollDownAbstractImage} />
+            </ScrollDownContainer>
             <HeroAbstract2 ref={abstractRef} src={HeroAbstract2Image} />
         </SectionContainer>
     )

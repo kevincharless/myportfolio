@@ -1,4 +1,4 @@
-import { SectionContainer, Row, Col, Content, Title, SubTitle, Description, AboutImage, ImageRingAbstract, ImageCrossArrowAbstract, DotAbstractYellow, XAbstractRed, XAbstractYellow, TriangleShadowAbstractBlue, CircleAbstractRed, CircleAbstractBlue, BoxAbstractRed } from './components';
+import { SectionContainer, Row, Col, Content, Title, SubTitle, Description, AboutImageContainer, AboutImage, ImageRingAbstract, ImageCrossArrowAbstract, DotAbstractYellow, XAbstractRed, XAbstractYellow, TriangleShadowAbstractBlue, CircleAbstractRed, CircleAbstractBlue, BoxAbstractRed } from './components';
 
 import ImageCrossArrowAbstractImage from '../../assets/images/abstract/ImageCrossArrowAbstract.svg';
 import ImageRingAbstractImage from '../../assets/images/abstract/ImageRingAbstract.svg';
@@ -17,17 +17,19 @@ const AboutMeSection = () => {
     return (
         <SectionContainer>
             <Row container>
-                <Col item xs={12} sm={7}>
+                <Col item xs={12} md={6}>
                     <Content>
                         <Title>More About Me</Title>
                         <SubTitle>I’m a Full Stack Developer from Riau Islands, Indonesia.</SubTitle>
                         <Description>I enjoy to solve a problem and turning my ideas into my projects. I like to learn new things and keep up with the times.</Description>
                     </Content>
                 </Col>
-                <Col item xs={12} sm={5}>
-                    <AboutImage src={AboutMeImage} />
-                    <ImageRingAbstract src={ImageRingAbstractImage} />
-                    <ImageCrossArrowAbstract src={ImageCrossArrowAbstractImage} />
+                <Col item xs={12} md={6}>
+                    <AboutImageContainer>
+                        <AboutImage src={AboutMeImage} />
+                        <ImageRingAbstract src={ImageRingAbstractImage} />
+                        <ImageCrossArrowAbstract src={ImageCrossArrowAbstractImage} />
+                    </AboutImageContainer>
                 </Col>
             </Row>
             <DotAbstractYellow src={DotAbstractYellowImage} />

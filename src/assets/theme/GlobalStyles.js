@@ -56,5 +56,4 @@ export const GlobalStyles = createGlobalStyle`
         background-image: url(${TwibonHmps});
         border-radius: 30em;
     }
-
 `;

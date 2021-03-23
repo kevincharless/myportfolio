@@ -21,7 +21,7 @@ export const Col = styled(Grid)`
 `
 
 export const Content = styled.div`
-    width: 455px;
+    width: 450px;
 `
 
 export const Title = styled.h1`
@@ -47,10 +47,21 @@ export const Description = styled.p`
     margin: 0;
 `
 
+export const AboutImageContainer = styled.div`
+    width: 251px;
+    height: 251px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding-right: 6em;
+`
+
 export const AboutImage = styled.img`
     width: 311px;
     height: 235px;
     transform: matrix(-1, 0, 0, 1, 0, 0);
+    margin-left: 8em;
 `
 
 export const ImageRingAbstract = styled.img`

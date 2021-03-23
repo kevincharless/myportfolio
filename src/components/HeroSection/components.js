@@ -22,7 +22,7 @@ export const Col = styled(Grid)`
 `
 
 export const Content = styled.div`
-    width: 455px;
+    width: 450px;
 `
 
 export const HeroAbstract = styled.img`
@@ -112,6 +112,8 @@ export const ImageContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    padding-right: 6em;
 `
 
 export const ImageAbstractBackground = styled.img`
@@ -120,9 +122,18 @@ export const ImageAbstractBackground = styled.img`
     
     position: absolute;
     top: 42%;
-    left: 72%;
+    left: 69%;
 
     z-index: -2;
+
+    @media only screen and (max-width: 966px) {
+        top: 62%;
+        left: 47%;
+    }
+`
+
+export const ScrollDownContainer = styled.div`
+
 `
 
 export const ScrollDown = styled.p`
@@ -133,6 +144,14 @@ export const ScrollDown = styled.p`
     position: absolute;
     top: 85%;
     left: 52%;
+
+    @media only screen and (max-width: 960px) {
+        width: 100px;
+        font-size: 14px;
+
+        position: absolute;
+        top: 98%;
+    }
 `
 
 export const ScrollDownAbstract = styled.img`
@@ -156,5 +175,10 @@ export const ScrollDownAbstract = styled.img`
         100% {
             transform: translateY(-25%);
         }
+    }
+
+    @media only screen and (max-width: 960px) {
+        position: absolute;
+        top: 105%;
     }
 `
