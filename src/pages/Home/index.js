@@ -1,23 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
-import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import MailIcon from '@material-ui/icons/Mail';
+
 import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
 import { AboutMeSection, HeroSection, Sidebar, SwitchThemeButton } from '../../components';
-import { Container } from './components'; 
 
 const drawerWidth = 160;
 
@@ -44,10 +35,12 @@ const useStyles = makeStyles((theme) => ({
     menuButton: {
         marginRight: theme.spacing(2),
         [theme.breakpoints.up('sm')]: {
-        display: 'none',
-        backgroundColor: 'transparent',
+            display: 'none',
+            backgroundColor: 'transparent',
             boxShadow: 'none',
+            
         },
+        color: '#DA5077'
     },
     // necessary for content to be below app bar
     drawerPaper: {
@@ -74,61 +67,54 @@ const Home = ({ theme, changeTheme }) => {
     );
 
     return (
-        // <Container>
-        //     <Sidebar theme={theme} />
-        //     <SwitchThemeButton theme={theme} changeTheme={changeTheme} />
-        //     <HeroSection />
-        //     <AboutMeSection />
-        // </Container>
-
         <div className={classes.root}>
-        <SwitchThemeButton theme={theme} changeTheme={changeTheme} />
+            <SwitchThemeButton theme={theme} changeTheme={changeTheme} />
 
-        <AppBar position="fixed" className={classes.appBar}>
-            <Toolbar>
-                <IconButton
-                    color="inherit"
-                    aria-label="open drawer"
-                    edge="start"
-                    onClick={handleDrawerToggle}
-                    className={classes.menuButton}
-                >
-                    <MenuIcon />
-                </IconButton>
-            </Toolbar>
-        </AppBar>
-        <nav className={classes.drawer} aria-label="mailbox folders">
-            {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-            <Hidden smUp implementation="css">
-                <Drawer
-                    variant="temporary"
-                    anchor={theme.direction === 'rtl' ? 'right' : 'left'}
-                    open={mobileOpen}
-                    onClose={handleDrawerToggle}
-                    className={classes.drawerPaper}
-                    ModalProps={{
-                        keepMounted: true, // Better open performance on mobile.
-                    }}
-                >
-                    {drawer}
-            </Drawer>
-            </Hidden>
-            <Hidden xsDown implementation="css">
-                <Drawer
-                                        className={classes.drawerPaper}
-
-                    variant="permanent"
-                    open
-                >
-                    {drawer}
+            <AppBar position="fixed" className={classes.appBar}>
+                <Toolbar>
+                    <IconButton
+                        color="inherit"
+                        aria-label="open drawer"
+                        edge="start"
+                        onClick={handleDrawerToggle}
+                        className={classes.menuButton}
+                    >
+                        <MenuIcon />
+                    </IconButton>
+                </Toolbar>
+            </AppBar>
+            <nav className={classes.drawer} aria-label="mailbox folders">
+                {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+                <Hidden smUp implementation="css">
+                    <Drawer
+                        variant="temporary"
+                        anchor={theme.direction === 'rtl' ? 'right' : 'left'}
+                        open={mobileOpen}
+                        onClose={handleDrawerToggle}
+                        className={classes.drawerPaper}
+                        ModalProps={{
+                            keepMounted: true, // Better open performance on mobile.
+                        }}
+                    >
+                        {drawer}
                 </Drawer>
-            </Hidden>
-        </nav>
-        <main className={classes.content}>
-            <HeroSection />
-            <AboutMeSection />
-        </main>
-    </div>
+                </Hidden>
+                <Hidden xsDown implementation="css">
+                    <Drawer
+                                            className={classes.drawerPaper}
+
+                        variant="permanent"
+                        open
+                    >
+                        {drawer}
+                    </Drawer>
+                </Hidden>
+            </nav>
+            <main className={classes.content}>
+                <HeroSection />
+                <AboutMeSection />
+            </main>
+        </div>
     );
     }
 

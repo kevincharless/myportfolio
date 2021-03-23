@@ -34,6 +34,10 @@ export const HeroAbstract2 = styled.img`
     position: absolute;
     top: 74%;
     left: 90%;
+
+    @media only screen and (max-width: 960px) {
+        top: 84%;
+    }
 `
 
 export const TitleAbstract = styled.div`
