@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useSpring, animated } from 'react-spring';
@@ -26,6 +26,44 @@ const HeroSection = () => {
 
     const abstractRef = useRef(null);
 
+    const TitleAbstract3Ref = useRef(null);
+    const TitleAbstract1Ref = useRef(null);
+    const TitleAbstract2Ref = useRef(null);
+
+    const sectionTrigger1 = useRef(null);
+    const sectionTrigger2 = useRef(null);
+    const sectionTrigger3 = useRef(null);
+
+
+    useEffect(() => {
+        sectionTrigger3.current = 
+            gsap.to(TitleAbstract3Ref.current, {
+                duration: 2,
+                keyframes: [{scale: (1, 1)}, {delay: 0.1, scaleX: 1.2, scaleY:0.8}, {delay: 0.3, scaleX: 0.8, scaleY: 1.2, y: -24}, {delay: 0.5, scaleX: 1, scaleY: 0.9, y:0}, {delay: 0.6, scaleX: 1, scaleY: 1}, {delay: 0.7, scaleX: 1.05, scaleY: 0.95}, {delay: 0.8, scaleX: 1, scaleY: 1}],
+                paused: true,
+            })
+        sectionTrigger1.current = 
+            gsap.to(TitleAbstract1Ref.current, {
+                duration: 3,
+                keyframes: [{delay: 2, scale: (1, 1)}, {delay: 0.1, scaleX: 1.2, scaleY:0.8}, {delay: 0.3, scaleX: 0.8, scaleY: 1.2, y: -24}, {delay: 0.5, scaleX: 1, scaleY: 0.9, y:0}, {delay: 0.6, scaleX: 1, scaleY: 1}, {delay: 0.7, scaleX: 1.05, scaleY: 0.95}, {delay: 0.8, scaleX: 1, scaleY: 1}],
+                paused: true,
+            })
+
+        sectionTrigger2.current =
+            gsap.to(TitleAbstract2Ref.current, {
+                duration: 4,
+                keyframes: [{delay: 4, scale: (1, 1)}, {delay: 0.1, scaleX: 1.2, scaleY:0.8}, {delay: 0.3, scaleX: 0.8, scaleY: 1.2, y: -24}, {delay: 0.5, scaleX: 1, scaleY: 0.9, y:0}, {delay: 0.6, scaleX: 1, scaleY: 1}, {delay: 0.7, scaleX: 1.05, scaleY: 0.95}, {delay: 0.8, scaleX: 1, scaleY: 1}],
+                paused: true,
+            })
+
+    }, [])
+
+    const onMouseEnterHandler = () => {
+        sectionTrigger3.current.play(0);
+        sectionTrigger1.current.play(0);
+        sectionTrigger2.current.play(0);
+    };
+
     useEffect(() => {
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -47,10 +85,10 @@ const HeroSection = () => {
             <Row container>
                 <Col item xs={12} sm={7}>
                     <Content>
-                        <TitleAbstract>
-                            <TitleAbstract3 src={TitleAbstractImage3} />
-                            <TitleAbstract1 src={TitleAbstractImage1} />
-                            <TitleAbstract2 src={TitleAbstractImage2} />
+                        <TitleAbstract onMouseEnter={onMouseEnterHandler}>
+                            <TitleAbstract3 ref={TitleAbstract3Ref} src={TitleAbstractImage3} />
+                            <TitleAbstract1 ref={TitleAbstract1Ref} src={TitleAbstractImage1} />
+                            <TitleAbstract2 ref={TitleAbstract2Ref} src={TitleAbstractImage2} />
                         </TitleAbstract>
                         <Title>Hi,</Title>
                         <Title>I’m Kevin Charles</Title>
