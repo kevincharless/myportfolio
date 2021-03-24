@@ -24,10 +24,15 @@ export const Container = styled.div`
 
     position: fixed;
     z-index: 999;
+
+    @media only screen and (max-width: 600px) {
+        width: 100vw;
+    }
 `
 
 export const Logo = styled.img`
     width: 160px;
+    align-self: center;
 `
 
 export const SocialMedia = styled.div`

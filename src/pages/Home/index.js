@@ -15,7 +15,7 @@ const drawerWidth = 160;
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        display: 'flex'
+        display: 'flex',
     },
     drawer: {
         [theme.breakpoints.up('sm')]: {
@@ -46,8 +46,9 @@ const useStyles = makeStyles((theme) => ({
     // necessary for content to be below app bar
     drawerPaper: {
         width: drawerWidth,
+        fontWeight: '400',
         "& .MuiPaper-root": {
-            color: "none"
+            color: "inherit"
         }
     },
     content: {
