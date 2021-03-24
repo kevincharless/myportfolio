@@ -103,7 +103,7 @@ const HeroSection = () => {
                         <animated.div className="card3" style={{ transform: props.xy.interpolate(trans3) }} />
                         <animated.div className="card4" style={{ transform: props.xy.interpolate(trans4) }} />
                     </ImageContainer>
-                    <ImageAbstractBackground src={ImageAbstract} />
+                    {/* <ImageAbstractBackground src={ImageAbstract} /> */}
                 </Col>
             </Row>
             <ScrollDownContainer>

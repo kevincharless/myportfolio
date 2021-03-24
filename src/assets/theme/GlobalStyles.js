@@ -11,7 +11,11 @@ export const GlobalStyles = createGlobalStyle`
         font-family: Poppins;
         transition: all 0.50s linear;
         margin: 0;
-        overflow-x: hidden;
+    }
+
+    #root {
+        position: relative;
+        overflow: hidden;
     }
 
     .card1,

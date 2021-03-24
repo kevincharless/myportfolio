@@ -15,11 +15,11 @@ const SwitchThemeButton = ({theme, changeTheme}) => {
     return (
         <Container onClick={triggerToggle} theme={theme} toggle={toggle}>
             <ToggleCheckIcon toggle={toggle}>
-                <NightsStayIcon />
+                <NightsStayIcon style={{ fontSize: '1em' }} />
             </ToggleCheckIcon>
             <ToggleCircle toggle={toggle} />
             <ToggleUnCheckIcon toggle={toggle}>
-                <WbSunnyIcon />
+                <WbSunnyIcon style={{ fontSize: '1em' }} />
             </ToggleUnCheckIcon>
         </Container>
     )

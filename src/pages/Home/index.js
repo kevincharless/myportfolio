@@ -8,13 +8,14 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import { makeStyles } from '@material-ui/core/styles';
 
+import { SwitchThemeContainer } from './components';
 import { AboutMeSection, HeroSection, Sidebar, SwitchThemeButton } from '../../components';
 
 const drawerWidth = 160;
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        display: 'flex',
+        display: 'flex'
     },
     drawer: {
         [theme.breakpoints.up('sm')]: {
@@ -68,8 +69,6 @@ const Home = ({ theme, changeTheme }) => {
 
     return (
         <div className={classes.root}>
-            <SwitchThemeButton theme={theme} changeTheme={changeTheme} />
-
             <AppBar position="fixed" className={classes.appBar}>
                 <Toolbar>
                     <IconButton
@@ -81,6 +80,9 @@ const Home = ({ theme, changeTheme }) => {
                     >
                         <MenuIcon />
                     </IconButton>
+                    <SwitchThemeContainer>
+                        <SwitchThemeButton theme={theme} changeTheme={changeTheme} />
+                    </SwitchThemeContainer>
                 </Toolbar>
             </AppBar>
             <nav className={classes.drawer} aria-label="mailbox folders">
@@ -101,8 +103,7 @@ const Home = ({ theme, changeTheme }) => {
                 </Hidden>
                 <Hidden xsDown implementation="css">
                     <Drawer
-                                            className={classes.drawerPaper}
-
+                        className={classes.drawerPaper}
                         variant="permanent"
                         open
                     >
@@ -112,7 +113,7 @@ const Home = ({ theme, changeTheme }) => {
             </nav>
             <main className={classes.content}>
                 <HeroSection />
-                <AboutMeSection />
+                {/* <AboutMeSection /> */}
             </main>
         </div>
     );

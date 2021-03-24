@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: 72px;
-    height: 36px;
+    width: 68px;
+    height: 34px;
 
     background-color: ${({ toggle }) => toggle ? '#1A1D24' : '#fff'};
     border-radius: 30px;
@@ -12,9 +12,10 @@ export const Container = styled.div`
 
     cursor: pointer;
 
-    position: absolute;
-    top: 8%;
-    left: 90%;
+    @media only screen and (max-width: 600px) {
+        width: 48px;
+        height: 24px;
+    }
 `
 
 export const ToggleCheckIcon = styled.div`
@@ -24,7 +25,12 @@ export const ToggleCheckIcon = styled.div`
 
     font-size: 24px;
     visibility: ${({ toggle }) => !toggle && 'hidden'};
-    padding: 0 0.2em;
+    padding: 0 0.18em;
+
+    @media only screen and (max-width: 600px) {
+        font-size: 16px;
+        padding: 0 0.2em;
+    }
 `
 
 export const ToggleUnCheckIcon = styled.div`
@@ -34,13 +40,17 @@ export const ToggleUnCheckIcon = styled.div`
     
     font-size: 24px;
     visibility: ${({ toggle }) => toggle && 'hidden'};
-    padding: 0 0.2em;
+    padding: 0 0.18em;
 
+    @media only screen and (max-width: 600px) {
+        font-size: 16px;
+        padding: 0 0.2em;
+    }
 `
 
 export const ToggleCircle = styled.div`
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
 
     border-radius: 30px;
 
@@ -55,4 +65,9 @@ export const ToggleCircle = styled.div`
     -webkit-transition: .4s;
     transition: .4s;
     cursor: pointer;
+
+    @media only screen and (max-width: 600px) {
+        width: 14px;
+        height: 14px;
+    }
 `

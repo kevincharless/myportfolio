@@ -6,10 +6,11 @@ export const SectionContainer = styled(Container)`
     align-items: center;
     justify-content: center;
 
+    height: 100vh;
 `
 
 export const Row = styled(Grid)`
-    height: 100vh;
+    height: 70%;
 
     display: flex;
     align-items: center;
@@ -23,12 +24,31 @@ export const Col = styled(Grid)`
 
 export const Content = styled.div`
     width: 450px;
+
+    position: relative;
+    
+    @media only screen and (max-width: 600px) {
+        width: 90vw;
+    }
 `
 
 export const HeroAbstract = styled.img`
     position: absolute;
     top: 1%;
     left: 10%;
+
+    @media only screen and (max-width: 1366px) {
+        left: 11%;
+    }
+
+    @media only screen and (max-width: 960px) {
+        left: 20%;
+    }
+
+    @media only screen and (max-width: 600px) {
+        top: 1%;
+        left: 16%;
+    }
 `
 export const HeroAbstract2 = styled.img`
     position: absolute;
@@ -36,17 +56,27 @@ export const HeroAbstract2 = styled.img`
     left: 90%;
 
     @media only screen and (max-width: 960px) {
-        top: 84%;
+        top: 85%;
+        left: 79%;
+    }
+
+    @media only screen and (max-width: 600px) {
+        top: 80%;
+        left: 57%;
     }
 `
 
 export const TitleAbstract = styled.div`
-
-    position: relative;
-    left: 65%;
-
     display: flex;
     align-items: center;
+    
+    position: absolute;
+    top: -45%;
+    left: 78%;
+
+    @media only screen and (max-width: 600px) {
+        left: 74%;
+    }
 `
 
 export const TitleAbstract1 = styled.img`
@@ -62,8 +92,8 @@ export const TitleAbstract3 = styled.img`
 `
 
 export const DescriptionAbstract = styled.img`
-    position: relative;
-    left: 78%;
+    position: absolute;
+    left: 90%;
 
     animation-name: arrow;
     animation-delay: 500ms;
@@ -79,7 +109,7 @@ export const DescriptionAbstract = styled.img`
         }
 
         30% {
-            transform: scale(1.2, 0.8) translate(24px, 0);
+            transform: scale(1.2, 0.8) translate(0.6em, 0);
         }
         50% {
             transform: scale(1, 0.9);
@@ -94,6 +124,10 @@ export const DescriptionAbstract = styled.img`
             transform: scale(1, 1) translate(0, 0);
         }
     }
+
+    @media only screen and (max-width: 600px) {
+        left: 89%;
+    }
 `
 
 export const Title = styled.h1`
@@ -102,12 +136,20 @@ export const Title = styled.h1`
 
     margin: 0;
     margin-bottom: -12px;
+
+    @media only screen and (max-width: 600px) {
+        font-size: 24px;
+    }
 `
 
 export const Description = styled.p`
     font-size: 18px;
 
     margin: -12px 0;
+
+    @media only screen and (max-width: 600px) {
+        font-size: 16px;
+    }
 `
 
 export const ImageContainer = styled.div`
@@ -130,40 +172,41 @@ export const ImageAbstractBackground = styled.img`
 
     z-index: -2;
 
-    @media only screen and (max-width: 966px) {
+    @media only screen and (max-width: 600px) {
         top: 62%;
         left: 47%;
     }
 `
 
 export const ScrollDownContainer = styled.div`
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    top: 85%;
+
+    @media only screen and (max-width: 600px) {
+        top: 90%;
+    }
 `
 
 export const ScrollDown = styled.p`
     color: ${({ theme }) => theme.colors.text};
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     
-    position: absolute;
-    top: 85%;
-    left: 52%;
+    width: 93px;
+    margin-bottom: 0.6em;
 
-    @media only screen and (max-width: 960px) {
-        width: 100px;
-        font-size: 14px;
-
-        position: absolute;
-        top: 98%;
+    @media only screen and (max-width: 600px) {
+        width: 82px;
+        font-size: 14px;/
     }
 `
 
 export const ScrollDownAbstract = styled.img`
     width: 43px;
-
-    position: absolute;
-    top: 93%;
-    left: 54%;
 
     animation: updown 3s ease infinite;
 
@@ -179,10 +222,5 @@ export const ScrollDownAbstract = styled.img`
         100% {
             transform: translateY(-25%);
         }
-    }
-
-    @media only screen and (max-width: 960px) {
-        position: absolute;
-        top: 105%;
     }
 `
