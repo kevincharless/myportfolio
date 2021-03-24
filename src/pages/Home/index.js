@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
         },
         backgroundColor: 'transparent',
         boxShadow: 'none',
+        position: 'absolute'
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -41,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
             boxShadow: 'none',
             
         },
+        position: 'fixed',
         color: '#DA5077'
     },
     // necessary for content to be below app bar
@@ -70,7 +72,7 @@ const Home = ({ theme, changeTheme }) => {
 
     return (
         <div className={classes.root}>
-            <AppBar position="fixed" className={classes.appBar}>
+            <AppBar className={classes.appBar}>
                 <Toolbar>
                     <IconButton
                         color="inherit"
@@ -114,7 +116,7 @@ const Home = ({ theme, changeTheme }) => {
             </nav>
             <main className={classes.content}>
                 <HeroSection />
-                {/* <AboutMeSection /> */}
+                <AboutMeSection />
             </main>
         </div>
     );

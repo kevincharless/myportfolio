@@ -9,7 +9,7 @@ export const Container = styled.div`
 
     display: flex;
     align-items: center;
-
+    position: relative;
     cursor: pointer;
 
     @media only screen and (max-width: 600px) {
@@ -25,11 +25,13 @@ export const ToggleCheckIcon = styled.div`
 
     font-size: 24px;
     visibility: ${({ toggle }) => !toggle && 'hidden'};
-    padding: 0 0.18em;
+    position: absolute;
+    left: 12%;
 
     @media only screen and (max-width: 600px) {
         font-size: 16px;
-        padding: 0 0.2em;
+        /* padding-left: 0;
+        padding: 0 0.2em; */
     }
 `
 
@@ -40,11 +42,15 @@ export const ToggleUnCheckIcon = styled.div`
     
     font-size: 24px;
     visibility: ${({ toggle }) => toggle && 'hidden'};
-    padding: 0 0.18em;
+    /* padding: 0 0.18em;
+    padding-right: 0.3em; */
+    position: absolute;
+    left: 56%;
 
     @media only screen and (max-width: 600px) {
         font-size: 16px;
-        padding: 0 0.2em;
+        /* padding-right: 0;
+        padding: 0 0.2em; */
     }
 `
 
@@ -58,9 +64,9 @@ export const ToggleCircle = styled.div`
 
     position: absolute;
 
-    -webkit-transform: ${({ toggle }) => toggle ? 'translateX(40px)' : 'translateX(8px)'};
-    -ms-transform: ${({ toggle }) => toggle ? 'translateX(40px)' : 'translateX(8px)'};
-    transform: ${({ toggle }) => toggle ? 'translateX(40px)' : 'translateX(8px)'};
+    -webkit-transform: ${({ toggle }) => toggle ? 'translateX(41px)' : 'translateX(8px)'};
+    -ms-transform: ${({ toggle }) => toggle ? 'translateX(41px)' : 'translateX(8px)'};
+    transform: ${({ toggle }) => toggle ? 'translateX(41px)' : 'translateX(8px)'};
 
     -webkit-transition: .4s;
     transition: .4s;
@@ -69,5 +75,9 @@ export const ToggleCircle = styled.div`
     @media only screen and (max-width: 600px) {
         width: 14px;
         height: 14px;
+
+        -webkit-transform: ${({ toggle }) => toggle ? 'translateX(28px)' : 'translateX(6px)'};
+        -ms-transform: ${({ toggle }) => toggle ? 'translateX(28px)' : 'translateX(6px)'};
+        transform: ${({ toggle }) => toggle ? 'translateX(28px)' : 'translateX(6px)'};
     }
 `

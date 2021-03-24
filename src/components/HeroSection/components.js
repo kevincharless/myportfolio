@@ -52,16 +52,16 @@ export const HeroAbstract = styled.img`
 `
 export const HeroAbstract2 = styled.img`
     position: absolute;
-    top: 74%;
+    top: 74vh;
     left: 90%;
 
     @media only screen and (max-width: 960px) {
-        top: 85%;
+        top: 85vh;
         left: 79%;
     }
 
     @media only screen and (max-width: 600px) {
-        top: 80%;
+        top: 80vh;
         left: 57%;
     }
 `
@@ -112,15 +112,9 @@ export const DescriptionAbstract = styled.img`
             transform: scale(1.2, 0.8) translate(0.6em, 0);
         }
         50% {
-            transform: scale(1, 0.9);
-        }
-        60% {
             transform: scale(1, 1);
         }
-        70% {
-            transform: scale(.95, 1.05);
-        }
-        80% {
+        90% {
             transform: scale(1, 1) translate(0, 0);
         }
     }
@@ -158,8 +152,8 @@ export const ImageContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    padding-right: 6em;
+
+    position: relative;
 `
 
 export const ImageAbstractBackground = styled.img`
@@ -167,14 +161,19 @@ export const ImageAbstractBackground = styled.img`
     height: 210px;
     
     position: absolute;
-    top: 42%;
-    left: 69%;
+    top: 21%;
+    left: 73%;
 
     z-index: -2;
 
+    @media only screen and (max-width: 960px) {
+        top: 29%;
+        left: 53.5%;
+    }
+
     @media only screen and (max-width: 600px) {
-        top: 62%;
-        left: 47%;
+        top: 28%;
+        left: 36%;
     }
 `
 
@@ -184,10 +183,10 @@ export const ScrollDownContainer = styled.div`
     flex-direction: column;
     align-items: center;
 
-    top: 85%;
+    top: 85vh;
 
     @media only screen and (max-width: 600px) {
-        top: 90%;
+        top: 90vh;
     }
 `
 

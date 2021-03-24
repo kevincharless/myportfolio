@@ -6,13 +6,15 @@ export const SectionContainer = styled(Container)`
     align-items: center;
     justify-content: center;
 
+    height: 100vh;
+
     @media only screen and (max-width: 960px) {
         padding: 4em 0;
     }
 `
 
 export const Row = styled(Grid)`
-    height: 100vh;
+    height: 80%;
 
     display: flex;
     align-items: center;
@@ -26,14 +28,21 @@ export const Col = styled(Grid)`
 
 export const Content = styled.div`
     width: 450px;
+
+    position: relative;
+
+    @media only screen and (max-width: 600px) {
+        width: 90vw;
+    }
 `
 
 export const Title = styled.h1`
     font-size: 32px;
-    font-weight: 600; 
+    font-weight: 600;
+
     margin: 0;
 
-    @media only screen and (max-width: 960px) {
+    @media only screen and (max-width: 600px) {
         font-size: 24px;
     }
 `
@@ -61,7 +70,7 @@ export const Description = styled.p`
     margin: 0;
 
     @media only screen and (max-width: 960px) {
-        font-size: 14px;
+        font-size: 16px;
     }
 `
 
@@ -73,38 +82,34 @@ export const AboutImageContainer = styled.div`
     justify-content: center;
     
     padding-right: 6em;
+
+    position: relative;
 `
 
 export const AboutImage = styled.img`
     width: 311px;
     height: 235px;
     transform: matrix(-1, 0, 0, 1, 0, 0);
-    margin-left: 8em;
 `
 
 export const ImageRingAbstract = styled.img`
-    position: relative;
-    left: -28%;
+    position: absolute;
+    top: -3%;
+    left: 42%;
     z-index: -5;
-    margin-bottom: 150px;
-
-    @media only screen and (max-width: 960px) {
-        left: -55%;
-        margin-bottom: 140px;
-    }
 `
 
 export const ImageCrossArrowAbstract = styled.img`
     position: absolute;
-    top: 146%;
-    left: 70%;
+    top: 46%;
+    left: 26%;
     z-index: -5;
-    margin-top: 0px;
 
-    @media only screen and (max-width: 960px) {
+
+    /* @media only screen and (max-width: 960px) {
         top: 174%;
         left: 50%;
-    }
+    } */
 `
 
 export const DotAbstractYellow = styled.img`

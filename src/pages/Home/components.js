@@ -8,7 +8,8 @@ export const SwitchThemeContainer = styled.div`
     position: relative;
     z-index: 10000;
     padding-right: 3em;
-    width: 100%;
+    width: 85%;
+    left: 15%;
 
     @media only screen and (max-width: 600px) {
         height: 56px;
