@@ -7,6 +7,7 @@ export const SectionContainer = styled(Container)`
     justify-content: center;
 
     height: 100vh;
+    position: relative;
 
     @media only screen and (max-width: 960px) {
         padding: 4em 0;
@@ -104,33 +105,42 @@ export const ImageCrossArrowAbstract = styled.img`
     top: 46%;
     left: 26%;
     z-index: -5;
-
-
-    /* @media only screen and (max-width: 960px) {
-        top: 174%;
-        left: 50%;
-    } */
 `
 
 export const DotAbstractYellow = styled.img`
     position: absolute;
-    top: 188%;
-    left: 10%;
-
     z-index: -5;
+
+    top: 88%;
+    left: -4%;
+
+    @media only screen and (max-width: 1366px) {
+        top: 86.5%;
+        left: -1%;
+    }
+
+    @media only screen and (max-width: 960px) {
+        top: 91.5%;
+        left: -1%;
+    }
+
+    @media only screen and (max-width: 600px) {
+        top: 89.5%;
+        left: -2%;
+    }
 `
 
 export const XAbstractRed = styled.img`
     position: absolute;
-    top: 110%;
-    left: 29%;
+    top: 10%;
+    left: 25%;
     
     z-index: -5;
 `
 
 export const XAbstractYellow = styled.img`
     position: absolute;
-    top: 193%;
+    top: 93%;
     left: 84%;
     
     z-index: -5;
@@ -138,7 +148,7 @@ export const XAbstractYellow = styled.img`
 
 export const TriangleShadowAbstractBlue = styled.img`
     position: absolute;
-    top: 120%;
+    top: 20%;
     left: 56%;
     
     z-index: -5;
@@ -146,7 +156,7 @@ export const TriangleShadowAbstractBlue = styled.img`
 
 export const CircleAbstractRed = styled.img`
     position: absolute;
-    top: 126%;
+    top: 26%;
     left: 91%;
     
     z-index: -5;
@@ -154,8 +164,8 @@ export const CircleAbstractRed = styled.img`
 
 export const CircleAbstractBlue = styled.img`
     position: absolute;
-    top: 187%;
-    left: 34%;
+    top: 87%;
+    left: 20%;
     
     z-index: -5;
 `
@@ -164,8 +174,13 @@ export const BoxAbstractRed = styled.img`
     width: 38px;
     height: 38px;
     position: absolute;
-    top: 175%;
-    left: 57%;
+    top: 75%;
+    left: 45%;
     
     z-index: -5;
+
+    @media only screen and (max-width: 960px) {
+        top: 50%;
+        left: 15%;
+    }
 `

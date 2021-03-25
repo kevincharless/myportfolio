@@ -6,6 +6,8 @@ export const SectionContainer = styled(Container)`
     align-items: center;
     justify-content: center;
 
+    position: relative;
+
     height: 100vh;
 `
 
@@ -35,14 +37,10 @@ export const Content = styled.div`
 export const HeroAbstract = styled.img`
     position: absolute;
     top: 1%;
-    left: 10%;
+    left: -4%;
 
     @media only screen and (max-width: 1366px) {
-        left: 11%;
-    }
-
-    @media only screen and (max-width: 960px) {
-        left: 20%;
+        left: -1%;
     }
 
     @media only screen and (max-width: 600px) {
@@ -152,8 +150,6 @@ export const ImageContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-
-    position: relative;
 `
 
 export const ImageAbstractBackground = styled.img`
@@ -161,19 +157,19 @@ export const ImageAbstractBackground = styled.img`
     height: 210px;
     
     position: absolute;
-    top: 21%;
-    left: 73%;
+    top: 42%;
+    left: 69%;
 
     z-index: -2;
 
     @media only screen and (max-width: 960px) {
-        top: 29%;
-        left: 53.5%;
+        top: 59%;
+        left: 41%;
     }
 
     @media only screen and (max-width: 600px) {
-        top: 28%;
-        left: 36%;
+        top: 56%;
+        left: 35%;
     }
 `
 
