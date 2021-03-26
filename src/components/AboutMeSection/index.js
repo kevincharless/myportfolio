@@ -96,7 +96,7 @@ const AboutMeSection = () => {
 
         gsap.fromTo(abstractRef1.current, {
             autoAlpha: 0,
-            x: -50
+            x: -5
         }, {
             delay: 3.5,
             duration: 0.5,
@@ -200,8 +200,8 @@ const AboutMeSection = () => {
             }   
         });
 
-        gsap.to(abstractRef2.current, 10, {rotation:"360", ease: 'linear', repeat:-1});
-        gsap.to(abstractRef3.current, 10, {rotation:"-360", ease: 'linear', repeat:-1});
+        gsap.fromTo(abstractRef2.current, 8, {x: -20}, {x:20, rotation:"360", ease: 'linear', repeat:-1, yoyo: 'true'});
+        gsap.fromTo(abstractRef3.current, 8, {x: 20}, {x:-20, rotation:"360", ease: 'linear', repeat:-1, yoyo: 'true'});
         gsap.fromTo(abstractRef4.current, 8, {y: 20}, {y:-20, rotation:"360", ease: 'linear', repeat:-1, yoyo: 'true'});
         gsap.fromTo(abstractRef5.current, 3, {y: 15}, {y:-15, ease: 'linear', repeat:-1, yoyo: 'true'});
         gsap.fromTo(abstractRef6.current, 3, {y: 15}, {y:-15, ease: 'linear', repeat:-1, yoyo: 'true'});
