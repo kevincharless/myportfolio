@@ -9,7 +9,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import { makeStyles } from '@material-ui/core/styles';
 
 import { SwitchThemeContainer } from './components';
-import { AboutMeSection, HeroSection, MySkillsSection, Sidebar, SwitchThemeButton } from '../../components';
+import { AboutMeSection, HeroSection, MySkillsSection, Sidebar, SwitchThemeButton, WorkSection } from '../../components';
 
 const drawerWidth = 160;
 
@@ -118,6 +118,7 @@ const Home = ({ theme, changeTheme }) => {
                 <HeroSection />
                 <AboutMeSection />
                 <MySkillsSection theme={theme} />
+                <WorkSection />
             </main>
         </div>
     );

@@ -219,7 +219,7 @@ const AboutMeSection = () => {
                         <Description>I enjoy to solve a problem and turning my ideas into my projects. I like to learn new things and keep up with the times.</Description>
                     </Content>
                 </Col>
-                <Col item xs={12} md={6}>
+                <Col item xs={12} md={6} style={{ display: 'flex', justifyContent: 'center' }}>
                     <AboutImageContainer>
                         <AboutImage ref={imageRef} src={AboutMeImage} />
                         <ImageRingAbstract ref={imageAbstract1Ref} src={ImageRingAbstractImage} />

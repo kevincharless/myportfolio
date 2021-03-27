@@ -28,8 +28,10 @@ export const Row = styled(Grid)`
 `
 
 export const Col = styled(Grid)`
-    display: flex;
-    justify-content: center;
+    @media only screen and (max-width: 960px) {
+        display: flex;
+        justify-content: center;
+    }
 `
 
 export const Content = styled.div`
@@ -199,7 +201,7 @@ export const ProgrammingLanguages = styled(Grid)`
     @media only screen and (max-width: 600px) {
         height: 8em;
         padding: 0.5em;
-        margin: 2em 1em;
+        margin: 2em 0;
     }
 `
 
@@ -220,6 +222,9 @@ export const ProgrammingLogoLG = styled.img`
 
     @media only screen and (max-width: 960px) {
         height: 28px;
+    }
+    @media only screen and (max-width: 600px) {
+        height: 24px;
     }
 `
 

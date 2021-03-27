@@ -23,8 +23,10 @@ export const Row = styled(Grid)`
 `
 
 export const Col = styled(Grid)`
-    display: flex;
-    justify-content: center;
+    @media only screen and (max-width: 960px) {
+        display: flex;
+        justify-content: center;
+    }
 `
 
 export const Content = styled.div`

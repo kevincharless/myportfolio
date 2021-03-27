@@ -108,7 +108,7 @@ const HeroSection = () => {
                         <DescriptionAbstract src={DescriptionAbstractImage} />
                     </Content>
                 </Col>
-                <Col item xs={12} md={6}>
+                <Col item xs={12} md={6} style={{ display: 'flex', justifyContent: 'center' }}>
                     <ImageContainer ref={imageRef} onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
                         <animated.div className="card1" style={{ transform: props.xy.interpolate(trans1) }} />
                         <animated.div className="card2" style={{ transform: props.xy.interpolate(trans2) }} />

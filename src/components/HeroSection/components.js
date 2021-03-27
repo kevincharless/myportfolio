@@ -20,8 +20,10 @@ export const Row = styled(Grid)`
 `
 
 export const Col = styled(Grid)`
-    display: flex;
-    justify-content: center;
+    @media only screen and (max-width: 960px) {
+        display: flex;
+        justify-content: center;
+    }
 `
 
 export const Content = styled.div`
@@ -37,10 +39,15 @@ export const Content = styled.div`
 export const HeroAbstract = styled.img`
     position: absolute;
     top: 1%;
-    left: -4%;
+    left: -10.2%;
 
-    @media only screen and (max-width: 1366px) {
-        left: -1%;
+    @media only screen and (max-width: 1600px) {
+        top: 1%;
+        left: -2.6%;
+    }
+
+    @media only screen and (max-width: 900px) {
+        left: -1.2%;
     }
 
     @media only screen and (max-width: 600px) {
@@ -48,10 +55,16 @@ export const HeroAbstract = styled.img`
         left: 16%;
     }
 `
+
 export const HeroAbstract2 = styled.img`
     position: absolute;
-    top: 74vh;
-    left: 90%;
+    top: 80.7vh;
+    left: 98%;
+
+    @media only screen and (max-width: 1600px) {
+        top: 76.8vh;
+        left: 90%;
+    }
 
     @media only screen and (max-width: 960px) {
         top: 85vh;

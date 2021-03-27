@@ -27,7 +27,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const MySkillsSection = ({theme}) => {
     const [open, toggle] = useState(false);
-    const [bind, { width }] = useMeasure();
+    const [bind] = useMeasure();
     const htmlCount = useSpring({ width: open ? 65 : 0});
     const cssCount = useSpring({ width: open ? 75 : 0});
     const javaScriptCount = useSpring({ width: open ? 80 : 0});
@@ -37,6 +37,10 @@ const MySkillsSection = ({theme}) => {
     const cssProgress = useSpring({ width: open ? 320*75/100 : 0 });
     const javaScriptProgress = useSpring({ width: open ? 320*80/100 : 0 });
     const expressJSProgress = useSpring({ width: open ? 320*50/100 : 0 });
+    
+    const logoExpressJS = theme.themeName === 'dark' ? expressJSDarkMode : expressJS;
+    const logoNodeJS = theme.themeName === 'dark' ? nodeJSDarkMode : nodeJS;
+    const logoMongoDB = theme.themeName === 'dark' ? mongoDBDarkMode : mongoDB;
 
     const mySkillRef = useRef(null);
     const progressBarRef = useRef(null);
@@ -90,7 +94,6 @@ const MySkillsSection = ({theme}) => {
         gsap.fromTo(progressBarRef.current, {
             autoAlpha: 0,
         }, {
-            delay: 0.4,
             duration: 0.6,
             autoAlpha: 1,
             ease: 'none',
@@ -285,7 +288,7 @@ const MySkillsSection = ({theme}) => {
                     <Content ref={skillRef}>
                         <SubTitle>Computer Science</SubTitle>
                         {Descriptions.map(description => (
-                            <Description>
+                            <Description key={description.title}>
                                 <DescriptionTitle>{description.title}</DescriptionTitle>
                                 <Colon>:</Colon>
                                 <DescriptionContent>{description.content}</DescriptionContent>
@@ -293,8 +296,8 @@ const MySkillsSection = ({theme}) => {
                         
                         ))}
                         <SubTitle>Spoken</SubTitle>
-                        {Languages.map(Language => (
-                            <Description>
+                        {Languages.map((Language, i) => (
+                            <Description key={i}>
                                 <DescriptionContent>{Language}</DescriptionContent>
                             </Description>
                         
@@ -302,43 +305,27 @@ const MySkillsSection = ({theme}) => {
                     </Content>
                 </Col>
                 <ProgrammingLanguages ref={barRef} container>
-                    <Col ref={htmlRef} item xs={3} md={1}>
+                    <Col ref={htmlRef} item xs={3} md={1} style={{ display: 'flex', justifyContent: 'center' }}>
                         <ProgrammingLogo src={html5} />
                     </Col>
-                    <Col ref={cssRef} item xs={3} md={2}>
+                    <Col ref={cssRef} item xs={3} md={2} style={{ display: 'flex', justifyContent: 'center' }}>
                         <ProgrammingLogo src={css3} />
                     </Col>
-                    <Col ref={jsRef} item xs={3} md={1}>
+                    <Col ref={jsRef} item xs={3} md={1} style={{ display: 'flex', justifyContent: 'center' }}>
                         <ProgrammingLogo src={javascript} />
                     </Col>
-                    <Col ref={reactRef} item xs={3} md={2}>
+                    <Col ref={reactRef} item xs={3} md={2} style={{ display: 'flex', justifyContent: 'center' }}>
                         <ProgrammingLogoLG src={react} />
                     </Col>
-                    {theme.themeName === 'dark' ? (
-                        <>
-                            <Col ref={expressRef} item xs={3} md={2}>
-                                <ProgrammingLogoLG src={expressJSDarkMode} />
-                            </Col>
-                            <Col ref={nodeRef} item xs={3} md={2}>
-                                <ProgrammingLogoLG src={nodeJSDarkMode} />
-                            </Col>
-                            <Col ref={mongoRef} item xs={3} md={2}>
-                                <ProgrammingLogoLG src={mongoDBDarkMode} />
-                            </Col>
-                        </>
-                    ) : (
-                        <>
-                            <Col ref={expressRef} item xs={3} md={2}>
-                                <ProgrammingLogoLG src={expressJS} />
-                            </Col>
-                            <Col ref={nodeRef} item xs={3} md={2}>
-                                <ProgrammingLogoLG src={nodeJS} />
-                            </Col>
-                            <Col ref={mongoRef} item xs={3} md={2}>
-                                <ProgrammingLogoLG src={mongoDB} />
-                            </Col>
-                        </>
-                    )}
+                    <Col ref={expressRef} item xs={4} md={2} style={{ display: 'flex', justifyContent: 'center' }}>
+                        <ProgrammingLogoLG src={logoExpressJS} />
+                    </Col>
+                    <Col ref={nodeRef} item xs={4} md={2} style={{ display: 'flex', justifyContent: 'center' }}>
+                        <ProgrammingLogoLG src={logoNodeJS} />
+                    </Col>
+                    <Col ref={mongoRef} item xs={4} md={2} style={{ display: 'flex', justifyContent: 'center' }}>
+                        <ProgrammingLogoLG src={logoMongoDB} />
+                    </Col>
                 </ProgrammingLanguages>
             </Row>
             <XAbstractYellow ref={abstractRef1} src={XAbstractYellowImage} />
