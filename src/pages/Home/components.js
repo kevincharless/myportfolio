@@ -16,3 +16,12 @@ export const SwitchThemeContainer = styled.div`
         padding-right: 1em;
     }
 `
+
+export const ModalBackground = styled.div`
+    position: absolute;
+    background-color: #1A1D24;
+    width: 100%;
+    height: 100%;
+
+    opacity: 5%;
+`

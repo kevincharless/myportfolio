@@ -39,11 +39,11 @@ export const Content = styled.div`
 export const HeroAbstract = styled.img`
     position: absolute;
     top: 1%;
-    left: -10.2%;
+    left: -4.5%;
 
-    @media only screen and (max-width: 1600px) {
+    @media only screen and (max-width: 1366px) {
         top: 1%;
-        left: -2.6%;
+        left: -1%;
     }
 
     @media only screen and (max-width: 900px) {
@@ -58,17 +58,17 @@ export const HeroAbstract = styled.img`
 
 export const HeroAbstract2 = styled.img`
     position: absolute;
-    top: 80.7vh;
-    left: 98%;
+    top: 78vh;
+    left: 92%;
 
-    @media only screen and (max-width: 1600px) {
-        top: 76.8vh;
-        left: 90%;
+    @media only screen and (max-width: 1366px) {
+        top: 74vh;
+        left: 87%;
     }
 
     @media only screen and (max-width: 960px) {
-        top: 85vh;
-        left: 79%;
+        top: 80vh;
+        left: 68%;
     }
 
     @media only screen and (max-width: 600px) {

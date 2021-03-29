@@ -11,6 +11,21 @@ export const GlobalStyles = createGlobalStyle`
         font-family: Poppins;
         transition: all 0.50s linear;
         margin: 0;
+        overflow: overlay;
+    }
+
+    ::-webkit-scrollbar {
+        background: transparent;
+        width: 1em;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: ${({theme}) => theme.colors.secondarytext};
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-corner {
+        border-radius: 10px;
     }
 
     #root {

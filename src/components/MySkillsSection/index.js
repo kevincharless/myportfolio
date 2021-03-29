@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { SectionContainer, Row, Col, Content, Title, ProgressBarGroup, ProgressBar, ProgressBarTitle, Bar, Fill, FillPercent, SubTitle, Description, DescriptionTitle, Colon, DescriptionContent, ProgrammingLanguages, ProgrammingLogo, ProgrammingLogoLG, XAbstractYellow, DiamondAbstractRed, CircleAbstractBlue1, PlusAbstractRed, CircleAbstractBlue2, ArrowTopAbstractYellow } from './components';
+import { SectionContainer, Row, Col, Content, Title, ProgressBarGroup, ProgressBar, ProgressBarTitle, Bar, Fill, FillPercent, SubTitle, Description, DescriptionTitle, Colon, DescriptionContent, ProgrammingLanguages, ProgrammingLogo, ProgrammingLogoLG, XAbstractYellow, DiamondAbstractRed, CircleAbstractBlue1, PlusAbstractRed, CircleAbstractBlue2, TriangleAbstractBlue, ArrowTopAbstractYellow } from './components';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -21,6 +21,7 @@ import XAbstractYellowImage from '../../assets/images/abstract/XAbstractYellow.s
 import DiamondAbstractRedImage from '../../assets/images/abstract/DiamondAbstractRed.svg';
 import CircleAbstractBlueImage from '../../assets/images/abstract/CircleAbstractBlue.svg';
 import PlusAbstractRedImage from '../../assets/images/abstract/PlusAbstractRed.svg';
+import TriangleAbstractBlueImage from '../../assets/images/abstract/TriangleAbstractBlue.svg';
 import ArrowTopAbstractYellowImage from '../../assets/images/abstract/ArrowTopAbstractYellow.svg';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -61,7 +62,7 @@ const MySkillsSection = ({theme}) => {
     const abstractRef4= useRef(null);
     const abstractRef5= useRef(null);
     const abstractRef6= useRef(null);
-
+    const abstractRef7= useRef(null);
 
     const Descriptions = [
         {
@@ -221,9 +222,22 @@ const MySkillsSection = ({theme}) => {
         });
         gsap.fromTo(abstractRef6.current, {
             autoAlpha: 0,
-            y: 5
         }, {
             delay: 6,
+            duration: 0.5,
+            autoAlpha: 1,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: mySkillRef.current,
+                start: "top center",
+                toggleActions: 'play none none reverse',
+            }   
+        });
+        gsap.fromTo(abstractRef7.current, {
+            autoAlpha: 0,
+            y: 5
+        }, {
+            delay: 6.2,
             duration: 0.5,
             autoAlpha: 1,
             y: 0,
@@ -240,7 +254,9 @@ const MySkillsSection = ({theme}) => {
         gsap.fromTo(abstractRef3.current, 5, {y: 20}, {y:-20, ease: 'linear', repeat:-1, yoyo: 'true'});
         gsap.fromTo(abstractRef4.current, 8, {y: 15}, {y:-15, rotation:"360", ease: 'linear', repeat:-1, yoyo: 'true'});
         gsap.fromTo(abstractRef5.current, 5, {y: 15}, {y:-15, ease: 'linear', repeat:-1, yoyo: 'true'});
-        gsap.fromTo(abstractRef6.current, 2, {y: 0}, {y:-15, ease: 'linear', repeat:-1, yoyo: 'true'});
+        gsap.fromTo(abstractRef6.current, 10, {x: -20, y: 20}, {x:20, y: -20, rotation:"360", ease: 'linear', repeat:-1, yoyo: 'true'});
+
+        gsap.fromTo(abstractRef7.current, 2, {y: 0}, {y:-15, ease: 'linear', repeat:-1, yoyo: 'true'});
 
     }, [])
     
@@ -333,7 +349,8 @@ const MySkillsSection = ({theme}) => {
             <CircleAbstractBlue1 ref={abstractRef3} src={CircleAbstractBlueImage} />
             <PlusAbstractRed ref={abstractRef4} src={PlusAbstractRedImage} />
             <CircleAbstractBlue2 ref={abstractRef5} src={CircleAbstractBlueImage} />
-            <ArrowTopAbstractYellow ref={abstractRef6} src={ArrowTopAbstractYellowImage} />
+            <TriangleAbstractBlue ref={abstractRef6} src={TriangleAbstractBlueImage} />
+            <ArrowTopAbstractYellow ref={abstractRef7} src={ArrowTopAbstractYellowImage} />
 
         </SectionContainer>
     )

@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
@@ -8,7 +8,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import { makeStyles } from '@material-ui/core/styles';
 
-import { SwitchThemeContainer } from './components';
+import { SwitchThemeContainer, ModalBackground } from './components';
 import { AboutMeSection, HeroSection, MySkillsSection, Sidebar, SwitchThemeButton, WorkSection } from '../../components';
 
 const drawerWidth = 160;
@@ -59,8 +59,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Home = ({ theme, changeTheme }) => {
+    const [open, setOpen] = useState('');
+    const [isZoom, setIsZoom] = useState('');
     const classes = useStyles();
-    const [mobileOpen, setMobileOpen] = React.useState(false);
+    const [mobileOpen, setMobileOpen] = useState(false);
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
@@ -88,7 +90,7 @@ const Home = ({ theme, changeTheme }) => {
                     </SwitchThemeContainer>
                 </Toolbar>
             </AppBar>
-            <nav className={classes.drawer} aria-label="mailbox folders">
+            <nav className={classes.drawer} aria-label="mailbox folders" style={{ pointerEvents: open &&'none' }}>
                 {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
                 <Hidden smUp implementation="css">
                     <Drawer
@@ -118,8 +120,10 @@ const Home = ({ theme, changeTheme }) => {
                 <HeroSection />
                 <AboutMeSection />
                 <MySkillsSection theme={theme} />
-                <WorkSection />
+                <WorkSection open={open} setOpen={setOpen} isZoom={isZoom} setIsZoom={setIsZoom} />
             </main>
+            <ModalBackground style={{ display: !open && 'none' }} onClick={() => setOpen('')} />
+            <ModalBackground style={{ display: !isZoom && 'none', opacity: '50%' }} onClick={() => setIsZoom('')} />
         </div>
     );
     }

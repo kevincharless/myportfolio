@@ -142,6 +142,10 @@ export const Bar = styled.div`
     border-radius: 0.3em;
     overflow: hidden;
 
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.04);
+    -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.04);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.04);
+
     @media only screen and (max-width: 600px) {
         height: 18px;
     }
@@ -189,6 +193,11 @@ export const ProgrammingLanguages = styled(Grid)`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.04);
+    -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.04);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.04);
+
 
     @media only screen and (max-width: 1366px) {
         margin: 3.2em 0;
@@ -279,6 +288,19 @@ export const CircleAbstractBlue2 = styled.img`
     @media only screen and (max-width: 600px) {
         top: 60%;
         left: 40%;
+    }
+`
+
+export const TriangleAbstractBlue = styled.img`
+    position: absolute;
+    top: 95%;
+    left: 65%;
+    
+    z-index: -5;
+
+    @media only screen and (max-width: 600px) {
+        top: 100%;
+        left: 75%;
     }
 `
 

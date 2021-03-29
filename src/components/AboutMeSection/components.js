@@ -114,7 +114,7 @@ export const DotAbstractYellow = styled.img`
     z-index: -5;
 
     top: 88%;
-    left: -4%;
+    left: -5%;
 
     @media only screen and (max-width: 1366px) {
         top: 86.5%;
