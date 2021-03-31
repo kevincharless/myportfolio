@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/myportfolio/static/js/main.53189ea5.chunk.js",
-    "main.js.map": "/myportfolio/static/js/main.53189ea5.chunk.js.map",
+    "main.js": "/myportfolio/static/js/main.eb14b7b0.chunk.js",
+    "main.js.map": "/myportfolio/static/js/main.eb14b7b0.chunk.js.map",
     "runtime-main.js": "/myportfolio/static/js/runtime-main.76d21ca7.js",
     "runtime-main.js.map": "/myportfolio/static/js/runtime-main.76d21ca7.js.map",
-    "static/js/2.5020059b.chunk.js": "/myportfolio/static/js/2.5020059b.chunk.js",
-    "static/js/2.5020059b.chunk.js.map": "/myportfolio/static/js/2.5020059b.chunk.js.map",
+    "static/js/2.80c80415.chunk.js": "/myportfolio/static/js/2.80c80415.chunk.js",
+    "static/js/2.80c80415.chunk.js.map": "/myportfolio/static/js/2.80c80415.chunk.js.map",
     "index.html": "/myportfolio/index.html",
-    "static/js/2.5020059b.chunk.js.LICENSE.txt": "/myportfolio/static/js/2.5020059b.chunk.js.LICENSE.txt",
+    "static/js/2.80c80415.chunk.js.LICENSE.txt": "/myportfolio/static/js/2.80c80415.chunk.js.LICENSE.txt",
     "static/media/ArrowTopAbstractYellow.296cbfdf.svg": "/myportfolio/static/media/ArrowTopAbstractYellow.296cbfdf.svg",
     "static/media/BigBoxAbstractRed.52aaf668.svg": "/myportfolio/static/media/BigBoxAbstractRed.52aaf668.svg",
     "static/media/BigDiamondAbstractBlue.4576d3b3.svg": "/myportfolio/static/media/BigDiamondAbstractBlue.4576d3b3.svg",
@@ -78,7 +78,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.76d21ca7.js",
-    "static/js/2.5020059b.chunk.js",
-    "static/js/main.53189ea5.chunk.js"
+    "static/js/2.80c80415.chunk.js",
+    "static/js/main.eb14b7b0.chunk.js"
   ]
 }
