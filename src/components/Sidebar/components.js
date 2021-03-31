@@ -1,11 +1,20 @@
 import styled from 'styled-components';
+import { Link} from 'react-scroll';
+
 
 export const Button = styled.li`
-    background-color: ${({ theme }) => theme.colors.primary};
+    background-color: ${({ theme }) => theme.colors.secondary};
     list-style-type: none;
 
-    padding: 21px;
+    padding: 0;
     font-size: 14px;
+`
+
+export const ButtonLink = styled(Link)`
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 21px 0;
 `
 
 export const ButtonList = styled.ul`

@@ -110,7 +110,7 @@ const MySkillsSection = ({theme}) => {
         gsap.fromTo(skillRef.current, {
             autoAlpha: 0,
         }, {
-            delay: 1.6,
+            delay: 1.5,
             duration: 0.4,
             autoAlpha: 1,
             ease: 'none',
@@ -137,19 +137,19 @@ const MySkillsSection = ({theme}) => {
             }   
         });
 
-        gsap.fromTo(htmlRef.current, { autoAlpha: 0, x: 5 }, { delay: 2.4, duration: 0.4, autoAlpha: 1, x: 0, ease: 'none', scrollTrigger: { trigger: mySkillRef.current, start: "top center", toggleActions: 'play none none reverse', } });
-        gsap.fromTo(cssRef.current, { autoAlpha: 0, x: 5 }, { delay: 2.8, duration: 0.4, autoAlpha: 1, x: 0, ease: 'none', scrollTrigger: { trigger: mySkillRef.current, start: "top center", toggleActions: 'play none none reverse', } });
-        gsap.fromTo(jsRef.current, { autoAlpha: 0, x: 5 }, { delay: 3.2, duration: 0.4, autoAlpha: 1, x: 0, ease: 'none', scrollTrigger: { trigger: mySkillRef.current, start: "top center", toggleActions: 'play none none reverse', } });
-        gsap.fromTo(reactRef.current, { autoAlpha: 0, x: 5 }, { delay: 3.6, duration: 0.4, autoAlpha: 1, x: 0, ease: 'none', scrollTrigger: { trigger: mySkillRef.current, start: "top center", toggleActions: 'play none none reverse', } });
-        gsap.fromTo(expressRef.current, { autoAlpha: 0, x: 5 }, { delay: 4, duration: 0.4, autoAlpha: 1, x: 0, ease: 'none', scrollTrigger: { trigger: mySkillRef.current, start: "top center", toggleActions: 'play none none reverse', } });
-        gsap.fromTo(nodeRef.current, { autoAlpha: 0, x: 5 }, { delay: 4.4, duration: 0.4, autoAlpha: 1, x: 0, ease: 'none', scrollTrigger: { trigger: mySkillRef.current, start: "top center", toggleActions: 'play none none reverse', } });
-        gsap.fromTo(mongoRef.current, { autoAlpha: 0, x: 5 }, { delay: 4.8, duration: 0.4, autoAlpha: 1, x: 0, ease: 'none', scrollTrigger: { trigger: mySkillRef.current, start: "top center", toggleActions: 'play none none reverse', } });
+        gsap.fromTo(htmlRef.current, { autoAlpha: 0, x: 5 }, { delay: 2.2, duration: 0.4, autoAlpha: 1, x: 0, ease: 'none', scrollTrigger: { trigger: mySkillRef.current, start: "top center", toggleActions: 'play none none reverse', } });
+        gsap.fromTo(cssRef.current, { autoAlpha: 0, x: 5 }, { delay: 2.4, duration: 0.4, autoAlpha: 1, x: 0, ease: 'none', scrollTrigger: { trigger: mySkillRef.current, start: "top center", toggleActions: 'play none none reverse', } });
+        gsap.fromTo(jsRef.current, { autoAlpha: 0, x: 5 }, { delay: 2.6, duration: 0.4, autoAlpha: 1, x: 0, ease: 'none', scrollTrigger: { trigger: mySkillRef.current, start: "top center", toggleActions: 'play none none reverse', } });
+        gsap.fromTo(reactRef.current, { autoAlpha: 0, x: 5 }, { delay: 2.8, duration: 0.4, autoAlpha: 1, x: 0, ease: 'none', scrollTrigger: { trigger: mySkillRef.current, start: "top center", toggleActions: 'play none none reverse', } });
+        gsap.fromTo(expressRef.current, { autoAlpha: 0, x: 5 }, { delay: 3, duration: 0.4, autoAlpha: 1, x: 0, ease: 'none', scrollTrigger: { trigger: mySkillRef.current, start: "top center", toggleActions: 'play none none reverse', } });
+        gsap.fromTo(nodeRef.current, { autoAlpha: 0, x: 5 }, { delay: 3.2, duration: 0.4, autoAlpha: 1, x: 0, ease: 'none', scrollTrigger: { trigger: mySkillRef.current, start: "top center", toggleActions: 'play none none reverse', } });
+        gsap.fromTo(mongoRef.current, { autoAlpha: 0, x: 5 }, { delay: 3.4, duration: 0.4, autoAlpha: 1, x: 0, ease: 'none', scrollTrigger: { trigger: mySkillRef.current, start: "top center", toggleActions: 'play none none reverse', } });
         
         gsap.fromTo(abstractRef1.current, {
             autoAlpha: 0,
             x: -5
         }, {
-            delay: 5,
+            delay: 3.5,
             duration: 0.5,
             autoAlpha: 1,
             x: 0,
@@ -164,7 +164,7 @@ const MySkillsSection = ({theme}) => {
             autoAlpha: 0,
             y: 5
         }, {
-            delay: 5.2,
+            delay: 3.8,
             duration: 0.5,
             autoAlpha: 1,
             y: 0,
@@ -179,7 +179,7 @@ const MySkillsSection = ({theme}) => {
             autoAlpha: 0,
             y: 5
         }, {
-            delay: 5.4,
+            delay: 3.8,
             duration: 0.5,
             autoAlpha: 1,
             y: 0,
@@ -194,7 +194,7 @@ const MySkillsSection = ({theme}) => {
             autoAlpha: 0,
             y: 5
         }, {
-            delay: 5.6,
+            delay: 4,
             duration: 0.5,
             autoAlpha: 1,
             y: 0,
@@ -209,7 +209,7 @@ const MySkillsSection = ({theme}) => {
             autoAlpha: 0,
             y: 5
         }, {
-            delay: 5.8,
+            delay: 4.3,
             duration: 0.5,
             autoAlpha: 1,
             y: 0,
@@ -223,7 +223,7 @@ const MySkillsSection = ({theme}) => {
         gsap.fromTo(abstractRef6.current, {
             autoAlpha: 0,
         }, {
-            delay: 6,
+            delay: 4.3,
             duration: 0.5,
             autoAlpha: 1,
             ease: 'none',
@@ -237,7 +237,7 @@ const MySkillsSection = ({theme}) => {
             autoAlpha: 0,
             y: 5
         }, {
-            delay: 6.2,
+            delay: 4.5,
             duration: 0.5,
             autoAlpha: 1,
             y: 0,

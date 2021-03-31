@@ -1,15 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
+
+import { Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import { makeStyles } from '@material-ui/core/styles';
 
 import { SwitchThemeContainer, ModalBackground } from './components';
-import { AboutMeSection, HeroSection, MySkillsSection, Sidebar, SwitchThemeButton, WorkSection } from '../../components';
+import { AboutMeSection, ContactSection, Footer, HeroSection, MySkillsSection, Sidebar, SwitchThemeButton, WorkSection } from '../../components';
 
 const drawerWidth = 160;
 
@@ -116,11 +118,23 @@ const Home = ({ theme, changeTheme }) => {
                     </Drawer>
                 </Hidden>
             </nav>
-            <main className={classes.content}>
-                <HeroSection />
-                <AboutMeSection />
-                <MySkillsSection theme={theme} />
-                <WorkSection open={open} setOpen={setOpen} isZoom={isZoom} setIsZoom={setIsZoom} />
+            <main className={classes.content} id="containerElement">
+                <Element name="HeroSection" className="element">
+                    <HeroSection />
+                </Element>
+                <Element name="AboutSection" className="element">
+                    <AboutMeSection name="firstInsideContainer" />
+                </Element>
+                <Element name="SkillSection" className="element">
+                    <MySkillsSection theme={theme} />
+                </Element>
+                <Element name="WorkSection" className="element">
+                    <WorkSection open={open} setOpen={setOpen} isZoom={isZoom} setIsZoom={setIsZoom} />
+                </Element>
+                <Element name="ContactSection" className="element">
+                    <ContactSection theme={theme} />
+                </Element>
+                <Footer />
             </main>
             <ModalBackground style={{ display: !open && 'none' }} onClick={() => setOpen('')} />
             <ModalBackground style={{ display: !isZoom && 'none', opacity: '50%' }} onClick={() => setIsZoom('')} />

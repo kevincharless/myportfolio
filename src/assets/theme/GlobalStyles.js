@@ -33,6 +33,10 @@ export const GlobalStyles = createGlobalStyle`
         overflow: hidden;
     }
 
+    .active {
+        background-color: ${({ theme }) => theme.colors.primary};
+    }
+
     .card1,
     .card2,
     .card3,
@@ -75,4 +79,10 @@ export const GlobalStyles = createGlobalStyle`
         background-image: url(${TwibonHmps});
         border-radius: 30em;
     }
-`;
+    label.Mui-focused {
+        color: green;
+    }
+    .MuiInput-underline:after {
+        border-bottom-color: green;
+    }
+`

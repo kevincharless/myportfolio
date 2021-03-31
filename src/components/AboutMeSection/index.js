@@ -49,7 +49,7 @@ const AboutMeSection = () => {
         gsap.fromTo(imageRef.current, {
             autoAlpha: 0,
         }, {
-            delay: 1,
+            delay: 0.5,
             duration: 1,
             autoAlpha: 1,
             ease: 'none',
@@ -65,7 +65,7 @@ const AboutMeSection = () => {
             y: 20,
             autoAlpha: 0,
         }, {
-            delay: 2.3,
+            delay: 1,
             duration: 0.5,
             autoAlpha: 1,
             x: 0,
@@ -82,7 +82,7 @@ const AboutMeSection = () => {
             autoAlpha: 0,
             rotate: 5,
         }, {
-            delay: 2.8,
+            delay: 1.8,
             duration: 0.5,
             autoAlpha: 1,
             rotate: 0,
@@ -98,7 +98,7 @@ const AboutMeSection = () => {
             autoAlpha: 0,
             x: -5
         }, {
-            delay: 3.5,
+            delay: 2.5,
             duration: 0.5,
             autoAlpha: 1,
             x: 0,
@@ -113,7 +113,7 @@ const AboutMeSection = () => {
             autoAlpha: 0,
             y: 5
         }, {
-            delay: 5,
+            delay: 3,
             duration: 0.5,
             autoAlpha: 1,
             y: 0,
@@ -128,7 +128,7 @@ const AboutMeSection = () => {
             autoAlpha: 0,
             y: 5
         }, {
-            delay: 5,
+            delay: 3,
             duration: 0.5,
             autoAlpha: 1,
             y: 0,
@@ -143,7 +143,7 @@ const AboutMeSection = () => {
             autoAlpha: 0,
             y: 5
         }, {
-            delay: 5.5,
+            delay: 3,
             duration: 0.5,
             autoAlpha: 1,
             y: 0,
@@ -158,7 +158,7 @@ const AboutMeSection = () => {
             autoAlpha: 0,
             y: 5
         }, {
-            delay: 4,
+            delay: 2.5,
             duration: 0.5,
             autoAlpha: 1,
             y: 0,
@@ -173,7 +173,7 @@ const AboutMeSection = () => {
             autoAlpha: 0,
             y: 5
         }, {
-            delay: 4,
+            delay: 2.5,
             duration: 0.5,
             autoAlpha: 1,
             y: 0,
@@ -188,7 +188,7 @@ const AboutMeSection = () => {
             autoAlpha: 0,
             y: 5
         }, {
-            delay: 4.5,
+            delay: 3.5,
             duration: 0.5,
             autoAlpha: 1,
             y: 0,

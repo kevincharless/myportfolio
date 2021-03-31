@@ -62,8 +62,8 @@ const HeroSection = () => {
                 paused: true,
             })
         gsap.from(contentRef.current, {opacity: 0, x: -50, duration: 1, delay: 1});
-        gsap.from(imageRef.current, {opacity: 0, y: 50, duration: 1, delay: 2});
-        gsap.from(imageBackgroundRef.current, {opacity: 0, duration: 1, delay: 3});
+        gsap.from(imageRef.current, {opacity: 0, y: 50, duration: 1, delay: 1.5});
+        gsap.from(imageBackgroundRef.current, {opacity: 0, duration: 1, delay: 2});
     }, [])
 
     const onMouseEnterHandler = () => {
@@ -82,13 +82,12 @@ const HeroSection = () => {
                 toggleActions: 'play none none reverse',
             }
         });
-        gsap.from(abstract1Ref.current, {y: -200, duration: 1, delay: 3.5});
-        gsap.from(abstract2Ref.current, {x: 200, duration: 1, delay: 3.5});
+        gsap.from(abstract1Ref.current, {y: -200, duration: 1, delay: 2.5});
+        gsap.from(abstract2Ref.current, {x: 200, duration: 1, delay: 2.5});
         tl.to(abstract2Ref.current, {
             rotation: 360,
         })
-
-        gsap.from(scrollDownRef.current, {opacity: 0, y: 50, duration: 1.5, delay: 4.5});
+        gsap.from(scrollDownRef.current, {opacity: 0, y: 50, duration: 1.5, delay: 3.5});
     }, [])
 
     return (

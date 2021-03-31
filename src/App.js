@@ -1,6 +1,5 @@
 import { Home } from './pages';
 
-
 const App = ({theme, changeTheme}) => {
   
   return (

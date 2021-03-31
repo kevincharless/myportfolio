@@ -1,12 +1,28 @@
+import { useState, useEffect } from 'react';
+
 import FacebookIcon from '@material-ui/icons/Facebook';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import InstagramIcon from '@material-ui/icons/Instagram';
 
-import { Button, ButtonList, Container, Logo, SocialMedia, SocialMediaLink } from './components';
+import { Link, animateScroll as scroll, scrollSpy } from 'react-scroll';
+
+
+import { Button, ButtonLink, ButtonList, Container, Logo, SocialMedia, SocialMediaLink } from './components';
 import LogoDarkMode from '../../assets/images/logo_darkmode.png';
 import LogoLightMode from '../../assets/images/logo_lightmode.png';
 
 const Sidebar = ({theme}) => {
+    useEffect(() => {
+        scrollSpy.update();
+    }, [])
+
+    const scrollToTop = () => {
+        scroll.scrollToTop();
+    }
+
+    const handleSetActive = to => {
+        console.log(to);
+    }
 
     return (
         <Container theme={theme}>
@@ -16,11 +32,31 @@ const Sidebar = ({theme}) => {
                 <Logo src={LogoLightMode} />
             )}
             <ButtonList>
-                <Button>Home</Button>
-                <Button>About Me</Button>
-                <Button>My Skills</Button>
-                <Button>Work</Button>
-                <Button>Contact</Button>
+                <Button>
+                    <ButtonLink activeClass="active" to="HeroSection" spy={true} smooth={true} offset={0} duration={500} onSetActive={handleSetActive}>
+                        Home
+                    </ButtonLink>
+                </Button>
+                <Button>
+                    <ButtonLink activeClass="active" to="AboutSection" spy={true} smooth={true} offset={0} duration={500} onSetActive={handleSetActive}>
+                        About Me
+                    </ButtonLink>
+                </Button>
+                <Button>
+                    <ButtonLink activeClass="active" to="SkillSection" spy={true} smooth={true} offset={0} duration={500} onSetActive={handleSetActive}>
+                        My Skills
+                    </ButtonLink>
+                </Button>
+                <Button>
+                    <ButtonLink activeClass="active" to="WorkSection" spy={true} smooth={true} offset={0} duration={500} onSetActive={handleSetActive}>
+                        Work
+                    </ButtonLink>
+                </Button>
+                <Button>
+                    <ButtonLink activeClass="active" to="ContactSection" spy={true} smooth={true} offset={0} duration={500} onSetActive={handleSetActive}>
+                        Contact
+                    </ButtonLink>
+                </Button>
             </ButtonList>
             <SocialMedia>
                 <SocialMediaLink href="https://www.facebook.com/kevin.charlesii" target="_blank">

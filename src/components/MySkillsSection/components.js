@@ -306,10 +306,15 @@ export const TriangleAbstractBlue = styled.img`
 
 export const ArrowTopAbstractYellow = styled.img`
     position: absolute;
-    top: 58%;
+    top: 57%;
     left: 90%;
-    
     z-index: -5;
+
+    @media only screen and (max-width: 1366px) {
+        top: 63%;
+        left: 90%;
+    }
+    
 
     @media only screen and (max-width: 600px) {
         top: 69%;

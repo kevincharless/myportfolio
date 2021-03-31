@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { SectionContainer, Row, Col, ModalCol, Content, Title, WorkCard, CardTitle, CardDescription, CardButton, CardBackground, CardModal, ModalCloseButton, CloseButton, ModalContent, ModalTitle, ModalSubTitle, ModalDescription, ModalSubDescription, GroupLists, List, GaleryImage, ZoomCloseButton, ZoomBackground, BlockAbstractRed1, BlockAbstractRed2, TriangleAbstractBlue, BoxAbstractRed, DiamondBorderAbstractYellow, DNAAbstractBlue, DNAAbstractYellow, RingAbstractBlue, BoxAbstractYellow, TriangleAbstractRed } from './components';
+import { SectionContainer, Row, Col, ModalCol, Content, Title, WorkCard, CardTitle, CardDescription, CardButton, CardBackground, CardModal, ModalCloseButton, CloseButton, ModalContent, ModalTitle, ModalSubTitle, ModalDescription, ModalSubDescription, GroupLists, List, GaleryImage, ImageText, ZoomCloseButton, ZoomBackground, BlockAbstractRed1, BlockAbstractRed2, TriangleAbstractBlue, BoxAbstractRed, DiamondBorderAbstractYellow, DNAAbstractBlue, DNAAbstractYellow, RingAbstractBlue, BoxAbstractYellow, TriangleAbstractRed } from './components';
 
 import { makeStyles } from '@material-ui/core/styles';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -9,9 +9,31 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 
-import kcsocmedImage from '../../assets/images/kcsocmed.png';
-import nowifibImage from '../../assets/images/nowifib.png';
-import kcdexImage from '../../assets/images/kcdex.png';
+import kcsocmedImage from '../../assets/images/kcsocmed/kcsocmed.png';
+import kcsocmedLoginFormImage from '../../assets/images/kcsocmed/loginForm.png';
+import kcsocmedRegisterFormImage from '../../assets/images/kcsocmed/registerForm.png';
+import kcsocmedProfilePageImage from '../../assets/images/kcsocmed/profilePage.png';
+import kcsocmedFindOthersImage from '../../assets/images/kcsocmed/findOthers.png';
+import kcsocmedFollowOthersImage from '../../assets/images/kcsocmed/followOthers.png';
+import kcsocmedCommentOthersImage from '../../assets/images/kcsocmed/commentOthers.png';
+
+
+import nowifibImage from '../../assets/images/nowifib/nowifib.png';
+import nowifibLoginFormImage from '../../assets/images/nowifib/loginForm.png';
+import nowifibRegisterFormImage from '../../assets/images/nowifib/registerForm.png';
+import nowifibDashboardImage from '../../assets/images/nowifib/dashboard.png';
+import nowifibFavoriteNotesImage from '../../assets/images/nowifib/favoriteNotes.png';
+import nowifibNoteDetailImage from '../../assets/images/nowifib/noteDetail.png';
+import nowifibEditNoteImage from '../../assets/images/nowifib/nowifib.png';
+
+import kcdexImage from '../../assets/images/kcdex/kcdex.png';
+import kcdexPokemonDetailImage from '../../assets/images/kcdex/pokemonDetail.png';
+import kcdexPokemonBaseStatsImage from '../../assets/images/kcdex/pokemonBaseStats.png';
+import kcdexPokemonEvolutionChartsImage from '../../assets/images/kcdex/pokemonEvolutionCharts.png';
+import kcdexPokemonMovesImage from '../../assets/images/kcdex/pokemonMoves.png';
+import kcdexSearchPokemonImage from '../../assets/images/kcdex/searchPokemon.png';
+import kcdexTypeChartsImage from '../../assets/images/kcdex/typeCharts.png';
+
 
 import BlockAbstractRedImage from '../../assets/images/abstract/BlockAbstractRed.svg';
 import BoxAbstractRedImage from '../../assets/images/abstract/BoxAbstractRed.svg';
@@ -48,24 +70,91 @@ const WorkSection = ({open, setOpen, isZoom, setIsZoom}) => {
 
     const cardContents = [
         {  
-
             image: kcsocmedImage,
             title:"Kcsocmed",
-            description:"social media that made by me. It’s really hard please help me by subscribe and follow my social media.",
-            technologies: ['Javascript', 'React JS (Axios, Redux, styled-components, moment, react-file-base64)', 'Node JS + Express JS', 'MongoDB', 'Google Auth API '],
-            galery: [kcsocmedImage, nowifibImage, kcdexImage],
+            description:"Social Media app that made with MERN Stack. In this app, user can make a post, comment, like, follow, find other people, edit his profile, and so on. User also can register using Google Registration.",
+            technologies: ['Javascript', 'React JS (axios, redux, styled-components, moment, react-file-base64, react-router-dom, reactstrap)', 'Node JS + Express JS (jsonwebtoken)', 'MongoDB', 'Google Auth API '],
+            galery: [
+                { 
+                    title: 'Login Form',
+                    image: kcsocmedLoginFormImage
+                }, { 
+                    title: 'Register Form',
+                    image: kcsocmedRegisterFormImage
+                }, { 
+                    title: 'Profile Page',
+                    image: kcsocmedProfilePageImage
+                }, { 
+                    title: 'Find Others',
+                    image: kcsocmedFindOthersImage
+                }, { 
+                    title: 'Follow Others',
+                    image: kcsocmedFollowOthersImage
+                }, { 
+                    title: 'Comment and Like Post',
+                    image: kcsocmedCommentOthersImage
+                }],
+            link: 'https://kcsocmed.netlify.app/',
         }, {
             image: nowifibImage,
             title: "Nowifib",
             description: "Todoapp With Firebase that made by me. It’s really hard please help me by subscribe and follow my social media.",
-            technologies: ['Javascript', 'React JS (Axios, Redux, styled-components, moment, react-file-base64)', 'Node JS + Express JS', 'MongoDB', 'Google Auth API '],
-            galery: [nowifibImage, nowifibImage, nowifibImage, nowifibImage, nowifibImage, nowifibImage , nowifibImage , nowifibImage],
+            technologies: ['Javascript', 'React JS (redux, redux-firestore, moment, reactstrap)', 'Bootstrap', 'Firebase'],
+            galery: [
+                { 
+                    title: 'Landing Page',
+                    image: nowifibImage
+                }, { 
+                    title: 'Login Form',
+                    image: nowifibLoginFormImage
+                }, { 
+                    title: 'Register Page',
+                    image: nowifibRegisterFormImage
+                }, { 
+                    title: 'Dashboard',
+                    image: nowifibDashboardImage
+                }, { 
+                    title: 'Favorite Notes Page',
+                    image: nowifibFavoriteNotesImage
+                }, { 
+                    title: 'Note Detail',
+                    image: nowifibNoteDetailImage
+                }, { 
+                    title: 'Edit Note',
+                    image: nowifibEditNoteImage
+                }
+            ],
+            link: 'https://todolist-with-firebase-a8910.web.app/',
         }, {
             image: kcdexImage,
             title: "Kcdex",
-            description: "Pokedex that made by me. It’s really hard please help me by subscribe and follow my social media.",
-            technologies: ['Javascript', 'React JS (Axios, Redux, styled-components, moment, react-file-base64)', 'Node JS + Express JS', 'MongoDB', 'Google Auth API '],
-            galery: [kcdexImage, kcdexImage, kcdexImage, kcdexImage, kcdexImage, kcdexImage , kcdexImage , kcdexImage],
+            description: "Online Pokedex with complete information of pokemons. User can find many information about the newest pokemons. This app will update as soon as the api server update their api.",
+            technologies: ['Javascript', 'React JS (axios, redux, react-router-dom, reactstrap)', 'pokeapi.co'],
+            galery: [
+                { 
+                    title: 'Landing Page',
+                    image: kcdexImage
+                }, { 
+                    title: 'Pokemon Detail',
+                    image: kcdexPokemonDetailImage
+                }, { 
+                    title: 'Pokemon Base Stats',
+                    image: kcdexPokemonBaseStatsImage
+                }, { 
+                    title: 'Pokemon Evolution Charts',
+                    image: kcdexPokemonEvolutionChartsImage
+                }, { 
+                    title: 'Pokemon Moves',
+                    image: kcdexPokemonMovesImage
+                }, { 
+                    title: 'Search Pokemon',
+                    image: kcdexSearchPokemonImage
+                }, { 
+                    title: 'Type Charts',
+                    image: kcdexTypeChartsImage
+                }
+            ],
+            link: 'https://kcdex.netlify.app/pokemon/',
         }
     ]
 
@@ -210,7 +299,7 @@ const WorkSection = ({open, setOpen, isZoom, setIsZoom}) => {
                                 </CardContent>
                             </CardActionArea>
                             <CardActions>
-                                <CardButton size="small">
+                                <CardButton size="small" href={card.link} target="_blank">
                                     See project
                                 </CardButton>
                             </CardActions>
@@ -260,14 +349,17 @@ const WorkSection = ({open, setOpen, isZoom, setIsZoom}) => {
                             <Row container style={{ justifyContent: 'flex-start' }}>
                                 {card.galery.map((galeryImage, i) => (
                                     <ModalCol iszoom={isZoom} item xs={12} sm={6} md={4} lg={3} key={i} style={{ padding: '0.3em', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                        <GaleryImage onClick={() => setIsZoom(galeryImage)} src={galeryImage} alt="no preview" 
+                                        <GaleryImage src={galeryImage.image} alt="no preview" 
                                         style={{  
-                                            position: isZoom === galeryImage && 'absolute', 
-                                            width: isZoom === galeryImage && '100%', 
-                                            height: isZoom === galeryImage && 'auto', 
-                                            top: isZoom === galeryImage && '0%', 
-                                            left: isZoom === galeryImage && '0%', 
-                                            cursor: isZoom === galeryImage && 'default' }} />
+                                            position: isZoom === galeryImage.image && 'absolute', 
+                                            width: isZoom === galeryImage.image && '100%', 
+                                            height: isZoom === galeryImage.image && 'auto', 
+                                            top: isZoom === galeryImage.image && '0%', 
+                                            left: isZoom === galeryImage.image && '0%', 
+                                            cursor: isZoom === galeryImage.image && 'default' }} />
+                                        <ImageText onClick={() => setIsZoom(galeryImage.image)} style={{ display: isZoom !== '' && 'none' }}>
+                                            {galeryImage.title}
+                                        </ImageText>
                                     </ModalCol>
                                 ))}
                             </Row>

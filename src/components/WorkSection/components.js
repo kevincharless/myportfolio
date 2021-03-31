@@ -102,12 +102,12 @@ export const CardTitle = styled.h3`
 export const CardDescription= styled.h5`
     color: ${({theme}) => theme.colors.secondarytext};
     font-family: Poppins;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
     margin: 0;
 
     @media only screen and (max-width: 600px) {
-        font-size: 12px;
+        font-size: 10px;
     }
 `
 
@@ -274,7 +274,23 @@ export const List = styled.li`
 export const GaleryImage = styled.img`
     width: 100%;
     height: 100%;
+`
+
+export const ImageText = styled.div`
+    position: absolute;
+    background-color: rgba(33, 38, 48, 25%);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    opacity: 0;
+
+    &:hover {
+    opacity: 1;
+    }
 `
 
 export const ZoomCloseButton = styled.div`
@@ -299,7 +315,6 @@ export const ZoomCloseButton = styled.div`
 
 export const ZoomBackground = styled.div`
     position: absolute;
-    background-color: ${({theme}) => theme.colors.text};
     width: 100%;
     height: 100%;
 
@@ -347,14 +362,14 @@ export const BlockAbstractRed2 = styled.img`
 
 export const TriangleAbstractBlue = styled.img`
     position: absolute;
-    top: 81%;
+    top: 90%;
     left: 20%;
     z-index: -5;
 `
 
 export const BoxAbstractRed = styled.img`
     position: absolute;
-    top: 85%;
+    top: 84%;
     left: 80%;
     z-index: -5;
 `
