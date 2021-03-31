@@ -15,6 +15,7 @@ export const ButtonLink = styled(Link)`
     width: 100%;
     height: 100%;
     padding: 21px 0;
+    cursor: pointer;
 `
 
 export const ButtonList = styled.ul`
