@@ -9,7 +9,7 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from './assets/theme/GlobalStyles';
 
 const Index = () => {
-  const [theme, setTheme] = useState(getFromLS('theme'));
+  const [theme, setTheme] = useState(getFromLS('theme') ? getFromLS('theme') : themes.theme.light);
 
   const changeTheme = () => {
     theme.themeName === 'dark' ? setTheme(themes.theme.light) : setTheme(themes.theme.dark);
