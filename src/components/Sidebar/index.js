@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
 import FacebookIcon from '@material-ui/icons/Facebook';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import InstagramIcon from '@material-ui/icons/Instagram';
 
-import { Link, animateScroll as scroll, scrollSpy } from 'react-scroll';
+import { scrollSpy } from 'react-scroll';
 
 
 import { Button, ButtonLink, ButtonList, Container, Logo, SocialMedia, SocialMediaLink } from './components';
@@ -15,10 +15,6 @@ const Sidebar = ({theme}) => {
     useEffect(() => {
         scrollSpy.update();
     }, [])
-
-    const scrollToTop = () => {
-        scroll.scrollToTop();
-    }
 
     const handleSetActive = to => {
         console.log(to);

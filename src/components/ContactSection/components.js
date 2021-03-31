@@ -258,11 +258,11 @@ export const DNAAbstractBlue = styled.img`
     z-index: -5;
     top: 45%;
     left: 0%;
-    animation: loop 4s 0s linear  infinite;
+    animation: loop1 4s 0s linear  infinite;
 
-    @keyframes loop {
+    @keyframes loop1 {
         from {
-            transform: rotate(45deg) rotateY(0);
+            transform:  rotate(45deg) rotateY(0);
         }
         to {
             transform: rotate(45deg) rotateY(-360deg);
@@ -275,7 +275,16 @@ export const DNAAbstractRed = styled.img`
     z-index: -5;
     top: 16%;
     left: 60%;
-    animation: loop 4s 0s linear  infinite;
+    animation: loop2 2.5s 0s linear  infinite;
+
+    @keyframes loop2 {
+        from {
+            transform: rotate(45deg) rotateY(0);
+        }
+        to {
+            transform: rotate(45deg) rotateY(360deg);
+        }
+    }
 `
 
 export const DNAAbstractYellow = styled.img`
@@ -283,5 +292,14 @@ export const DNAAbstractYellow = styled.img`
     z-index: -5;
     top: 80%;
     left: 80%;
-    animation: loop 4s 0s linear  infinite;
+    animation: loop3 3s 0s linear  infinite;
+
+    @keyframes loop3 {
+        from {
+            transform: rotate(45deg) rotateY(0);
+        }
+        to {
+            transform: rotate(45deg) rotateY(-360deg);
+        }
+    }
 `

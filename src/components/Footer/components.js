@@ -13,12 +13,12 @@ export const SectionContainer = styled(Container)`
 export const Row = styled(Grid)`
     color: ${({theme}) => theme.colors.secondarytext};
     padding: 0 1.5em 2em 0;
-    font-size: 18px;
+    font-size: 14px;
 
     @media only screen and (max-width: 1366px) {
         padding: 0 1.5em 1em 0;
     }
     @media only screen and (max-width: 600px) {
-        font-size: 14px;
+        font-size: 12px;
     }
 `

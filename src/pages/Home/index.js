@@ -1,16 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
 
-import { Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Element } from 'react-scroll';
+import { gsap } from 'gsap';
 
 import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import { makeStyles } from '@material-ui/core/styles';
 
-import { SwitchThemeContainer, ModalBackground } from './components';
+import { SwitchThemeContainer, ModalBackground, Information } from './components';
 import { AboutMeSection, ContactSection, Footer, HeroSection, MySkillsSection, Sidebar, SwitchThemeButton, WorkSection } from '../../components';
 
 const drawerWidth = 160;
@@ -65,6 +66,7 @@ const Home = ({ theme, changeTheme }) => {
     const [isZoom, setIsZoom] = useState('');
     const classes = useStyles();
     const [mobileOpen, setMobileOpen] = useState(false);
+    const infoRef = useRef(null);
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
@@ -73,6 +75,15 @@ const Home = ({ theme, changeTheme }) => {
     const drawer = (
         <Sidebar theme={theme} />
     );
+
+    useEffect(() => {
+        gsap.to(infoRef.current, {
+            delay: 4.5,
+            keyframes: [
+                {opacity: '100%'}, {delay: 4, opacity: '0'}
+            ]
+        });
+    }, [])
 
     return (
         <div className={classes.root}>
@@ -88,6 +99,9 @@ const Home = ({ theme, changeTheme }) => {
                         <MenuIcon />
                     </IconButton>
                     <SwitchThemeContainer>
+                        <Information ref={infoRef}>
+                            Change the theme by clicking this button
+                        </Information>
                         <SwitchThemeButton theme={theme} changeTheme={changeTheme} />
                     </SwitchThemeContainer>
                 </Toolbar>

@@ -290,7 +290,7 @@ const ContactSection = ({theme}) => {
                                     <TextArea aria-label="Message" rowsMin={3} placeholder="Message" name="message" />
                                 </Col>
                                 <Col item xs={12} style={{ padding: '0.5em 0', display: 'flex', justifyContent: 'flex-end' }}>
-                                    <SubmitButton type="submit" value="Send">Send Image</SubmitButton>
+                                    <SubmitButton type="submit" value="Send">Send Message</SubmitButton>
                                 </Col>
                             </Row>
                         </form>
