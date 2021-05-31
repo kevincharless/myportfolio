@@ -39,7 +39,7 @@ const ContactSection = ({theme}) => {
     const mySocialMedia = [
         {
             icon: EmailIcon,
-            id: 'kevinismage@gmail.com',
+            id: 'kevincharlesid@gmail.com',
         }, {
             icon: FacebookIcon,
             id: '@kevin.charlesii',
